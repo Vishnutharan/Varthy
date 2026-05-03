@@ -122,7 +122,7 @@ IMTA
 
 1.3854
 
-0.1695
+0.0891
 
 Not Significant
 
@@ -158,7 +158,7 @@ IMTA
 
 1.5376
 
-0.1278
+0.1434
 
 
 
@@ -184,7 +184,7 @@ Monoculture
 
 Table 2: Descriptive Statistics and Welch’s t-test Results for Holothuria scabra
 
-Descriptive statistics indicated that individuals in the IMTA group reached slightly higher mean weights (328.05± 92.27 g) and lengths (16.39±2.06cm) compared to the Monoculture group. However, Welch's t-test confirmed these differences were not statistically significant (p > 0.05). This lack of significance is visualized in Figure 2, where boxplots show overlapping ranges for both parameters.
+Descriptive statistics indicated that individuals in the IMTA group reached higher mean weights (331.58 ± 86.36 g) and lengths (16.48 ± 2.06 cm) compared to the Monoculture group (298.33 ± 97.01 g and 15.67 ± 2.31 cm). However, Welch's t-test confirmed these differences were not statistically significant (p = 0.089 and p = 0.143, respectively). This lack of significance is visualized in Figure 2, where boxplots show overlapping ranges for both parameters.
 
 
 

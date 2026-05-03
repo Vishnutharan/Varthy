@@ -38,32 +38,12 @@ print(weeks_data[,c(1,4,5)])
 # Build individual-level data from raw sheet
 sc_raw <- read_excel(resfile, sheet="sea cucumber growth ")
 
-# Individual sea cucumber data
-imta_w <- c(278,292,367,359,373,279,435,436,272,138,396,357,
-            248,276,260,316,123,262,435,241,280,265,
-            368,338,351,393,395,277,422,321,305,389,343,271,
-            305,270,348,439,498,396,495,278)
-mono_w <- c(315,263,405,260,360,329,255,249,351,321,
-            447,361,228,147,213,349,236,293,324,
-            405,349,432,346,399,280,290,168,
-            370,318,257,430,355,233,411,248,162,
-            325,341,316,290,409,297,334,169,295,371)
-
-imta_l <- c(17,15,18,14,17.5,16.5,17,20,17,12,17,18,
-            13.5,14,14.5,17,11.5,14,17,14.5,17,15,
-            18,17,17.5,18,18,16,17,16.5,15,17,16,16.5,
-            17.5,15.5,17,18,19.5,18.5,19,14)
-mono_l <- c(17,15.5,15,14.5,15.5,15.5,16,13.5,17.5,15,
-            17,17.5,14,13,13.5,18,15,15,16.5,
-            16,14,20,16.5,19,14.5,15,13,
-            18.5,17.5,13.5,18,17,14,18,17,12,
-            17,17,17,15.5,19.5,16,17,14,18.5,17)
-
-# Scale data to EXACTLY match the descriptive statistics in the report for reproducibility
-imta_w <- (imta_w - mean(imta_w))/sd(imta_w) * 92.27 + 328.048
-mono_w <- (mono_w - mean(mono_w))/sd(mono_w) * 99.421 + 299.717
-imta_l <- (imta_l - mean(imta_l))/sd(imta_l) * 2.062 + 16.393
-mono_l <- (mono_l - mean(mono_l))/sd(mono_l) * 2.457 + 15.652
+# Individual sea cucumber data from cleaned raw Excel file
+sc_ind <- read.csv("csv_data/sea_cucumber_individual.csv")
+imta_w <- sc_ind$Weight[sc_ind$Treatment=="IMTA"]
+mono_w <- sc_ind$Weight[sc_ind$Treatment=="Monoculture"]
+imta_l <- sc_ind$Length[sc_ind$Treatment=="IMTA"]
+mono_l <- sc_ind$Length[sc_ind$Treatment=="Monoculture"]
 
 
 cat("\n--- 1.1 Normality Tests ---\n")

@@ -9,15 +9,19 @@ sink(file.path(outdir, "analysis_results.txt"), append=TRUE)
 cat("\n\nSECTION 2: SEAWEED BIOMASS ANALYSIS\n")
 cat("====================================\n\n")
 
-# Seaweed weight gain per replicate
-rep1_gain <- rep(c(10,10,4,9,5,8,6,6,7,-18), 3)
-rep2_gain <- rep(c(4,9,6,7,7,6,9,7,12,7), 3)
-rep3_gain <- rep(c(8,6,9,10,7,10,-16,9,10,9), 3)
+sw_ind <- read.csv("csv_data/seaweed_biomass.csv")
 
-# Remove dead (0 final weight) seedlings for cleaner analysis
-rep1_wg <- c(10,10,4,9,5,8,6,6,7)
-rep2_wg <- c(7,9,7,6,7,9,8,12,7)
-rep3_wg <- c(8,6,9,10,7,10,9,10,9,7,8,6,7)
+# Filter out seedlings that died (0 final weight) for certain analyses if needed
+# But for ANOVA across replicates, we use the cleaned gain from raw data
+rep1_gain <- sw_ind$Gain[sw_ind$Replicate=="Rep1"]
+rep2_gain <- sw_ind$Gain[sw_ind$Replicate=="Rep2"]
+rep3_gain <- sw_ind$Gain[sw_ind$Replicate=="Rep3"]
+
+# For comparison purposes, the clean dataset without 0-final-weight seedlings
+rep1_wg <- sw_ind$Gain[sw_ind$Replicate=="Rep1" & sw_ind$Final > 0]
+rep2_wg <- sw_ind$Gain[sw_ind$Replicate=="Rep2" & sw_ind$Final > 0]
+rep3_wg <- sw_ind$Gain[sw_ind$Replicate=="Rep3" & sw_ind$Final > 0]
+
 
 cat("--- 2.1 Normality Tests (Shapiro-Wilk) ---\n")
 sw1 <- shapiro.test(rep1_gain); cat("Rep1: W=",sw1$statistic,"p=",sw1$p.value,"\n")

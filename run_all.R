@@ -5,8 +5,9 @@
 cat("Starting Aquaculture Data Analysis Pipeline...\n")
 cat("==============================================\n")
 
-# Ensure output directory exists
-dir.create("R_output", showWarnings = FALSE)
+# Part 0: Data Cleaning
+cat("\n[0/5] Running Part 0: Extracting and Cleaning Raw Data...\n")
+source("data_cleaning.R")
 
 # Part 1: Sea cucumber growth analysis, normality, t-tests, predictions
 cat("\n[1/5] Running Part 1: Sea Cucumber Growth Analysis...\n")

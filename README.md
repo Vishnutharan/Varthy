@@ -40,13 +40,15 @@ Varthy/
 ## Key Findings
 
 ### Sea Cucumber Growth
-- IMTA mean weight: **328.05g** vs Mono: **299.72g** (p=0.1695)
+- IMTA mean weight: **331.58g** vs Mono: **298.33g** (p=0.089)
+- IMTA mean length: **16.48cm** vs Mono: **15.67cm** (p=0.143)
 - IMTA growth is **more stable** (CV: 14.3% vs 18.1%)
 - **Exploratory Prediction**: Week 12 weight forecast suggests IMTA **531g** vs Mono **330g**, however, 95% prediction intervals are very wide (e.g. IMTA 144–919g), meaning this projection should be treated as a theoretical trajectory rather than a strong forecast.
 - Current study is **underpowered** (power=0.206); need n=249/group or extend to Week 12
 
-### Phosphorus Anomaly
-- IMTA R2 replicate identified as **major outlier** inflating P values
+### Seaweed Biomass Analysis
+- Analyzed n=93 seedlings directly from raw data (correcting previous mismatch).
+- No significant difference in weight gain between ropes/replicates (p=0.551).
 - Genuine P accumulation confirmed even after outlier removal (+115%)
 - Current seaweed:cucumber ratio (**0.14:1**) insufficient for bio-filtration
 - **Recommendation**: Increase seaweed density by 250% (ratio to 0.50:1)

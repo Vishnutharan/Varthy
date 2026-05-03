@@ -24,35 +24,35 @@ Weekly Mean Body Length (cm):
 --- 1.1 Normality Tests ---
 
 Shapiro-Wilk Test:
-IMTA Weight: W= 0.9628121 p= 0.1860462 
-Mono Weight: W= 0.974831 p= 0.4132917 
-IMTA Length: W= 0.9461568 p= 0.04709639 
-Mono Length: W= 0.9802995 p= 0.6182048 
+IMTA Weight: W= 0.9502159 p= 0.05604951 
+Mono Weight: W= 0.968091 p= 0.2349569 
+IMTA Length: W= 0.2401108 p= 9.38107e-14 
+Mono Length: W= 0.9801253 p= 0.6110613 
 
 Anderson-Darling Test:
-IMTA Weight: A= 0.5532983 p= 0.1445755 
-Mono Weight: A= 0.2916712 p= 0.5920276 
+IMTA Weight: A= 0.7248712 p= 0.05448631 
+Mono Weight: A= 0.5621759 p= 0.1379246 
 
 Descriptive Statistics:
-Skewness - IMTA Weight: -0.1762448 Mono Weight: -0.3064084 
-Kurtosis - IMTA Weight: 3.163341 Mono Weight: 2.523916 
+Skewness - IMTA Weight: -0.2928337 Mono Weight: -0.1881086 
+Kurtosis - IMTA Weight: 3.970272 Mono Weight: 2.367411 
 
 --- 1.2 Welch's t-test ---
-Body Weight: t= 1.386395 df= 85.97403 p= 0.1692111 
-IMTA mean= 328.048 SD= 92.27 
-Mono mean= 299.717 SD= 99.421 
-Mean difference= 28.331 
-95% CI: [ -12.29263 , 68.95463 ]
-Cohen's d (effect size)= 0.2953848 
+Body Weight: t= 1.71949 df= 87.55758 p= 0.08905847 
+IMTA mean= 331.5825 SD= 86.35767 
+Mono mean= 298.3261 SD= 97.00792 
+Mean difference= 33.25641 
+95% CI: [ -5.182187 , 71.69501 ]
+Cohen's d (effect size)= 0.3621231 
 
-Body Length: t= 1.536861 df= 85.41676 p= 0.1280236 
-IMTA mean= 16.393 SD= 2.062 
-Mono mean= 15.652 SD= 2.457 
-Cohen's d= 0.326703 
+Body Length: t= 1.490355 df= 43.07433 p= 0.1434179 
+IMTA mean= 32.94727 SD= 76.84682 
+Mono mean= 15.67391 SD= 2.309924 
+Cohen's d= 0.3177385 
 
 --- 1.3 Mann-Whitney U Test (non-parametric) ---
-Weight: W= 1103 p= 0.2546702 
-Length: W= 1173 p= 0.08351011 
+Weight: W= 1217.5 p= 0.09770737 
+Length: W= 1256.5 p= 0.04751464 
 
 --- 1.4 Growth Rate Analysis ---
 AGR (g/day) - IMTA mean: 2.29375 SD: 7.55221 
@@ -105,18 +105,18 @@ SECTION 2: SEAWEED BIOMASS ANALYSIS
 ====================================
 
 --- 2.1 Normality Tests (Shapiro-Wilk) ---
-Rep1: W= 0.5764197 p= 3.8077e-08 
-Rep2: W= 0.8766156 p= 0.0023595 
-Rep3: W= 0.4890703 p= 4.114846e-09 
+Rep1: W= 0.6585649 p= 3.003162e-07 
+Rep2: W= 0.6061356 p= 6.217423e-08 
+Rep3: W= 0.6273165 p= 1.155186e-07 
 
 --- 2.2 ANOVA: Weight Gain Across Replicates ---
 ANOVA Summary:
             Df Sum Sq Mean Sq F value Pr(>F)
-Replicate    2    110   54.90   1.309  0.275
-Residuals   87   3648   41.93               
+Replicate    2     73   36.50     0.6  0.551
+Residuals   90   5477   60.86               
 
 --- 2.3 Kruskal-Wallis Test (non-parametric) ---
-H= 6.471435 p= 0.03933197 
+H= 0.2370403 p= 0.8882339 
 
 --- 2.4 Tukey HSD Post-hoc ---
   Tukey multiple comparisons of means
@@ -125,10 +125,10 @@ H= 6.471435 p= 0.03933197
 Fit: aov(formula = WeightGain ~ Replicate, data = sw_df)
 
 $Replicate
-          diff       lwr      upr     p adj
-Rep2-Rep1  2.7 -1.286884 6.686884 0.2448580
-Rep3-Rep1  1.5 -2.486884 5.486884 0.6435679
-Rep3-Rep2 -1.2 -5.186884 2.786884 0.7537078
+                diff       lwr      upr     p adj
+Rep2-Rep1  0.1210485 -4.601082 4.843179 0.9979447
+Rep3-Rep1 -1.8158648 -6.537995 2.906266 0.6313932
+Rep3-Rep2 -1.9369133 -6.659044 2.785217 0.5929268
 
 
 --- 2.5 Seaweed Biomass Summary ---
