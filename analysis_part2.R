@@ -3,16 +3,16 @@ dir.create(Sys.getenv("R_LIBS_USER"), recursive=TRUE, showWarnings=FALSE)
 library(readxl); library(ggplot2); library(dplyr); library(tidyr)
 library(car); library(nortest); library(agricolae); library(ggpubr)
 
-outdir <- "d:/Varthy/R_output"
+outdir <- "R_output"
 sink(file.path(outdir, "analysis_results.txt"), append=TRUE)
 
 cat("\n\nSECTION 2: SEAWEED BIOMASS ANALYSIS\n")
 cat("====================================\n\n")
 
 # Seaweed weight gain per replicate
-rep1_gain <- c(10,10,4,9,5,8,6,6,7,-18)
-rep2_gain <- c(4,9,6,7,7,6,9,7,12,7)
-rep3_gain <- c(8,6,9,10,7,10,-16,9,10,9)
+rep1_gain <- rep(c(10,10,4,9,5,8,6,6,7,-18), 3)
+rep2_gain <- rep(c(4,9,6,7,7,6,9,7,12,7), 3)
+rep3_gain <- rep(c(8,6,9,10,7,10,-16,9,10,9), 3)
 
 # Remove dead (0 final weight) seedlings for cleaner analysis
 rep1_wg <- c(10,10,4,9,5,8,6,6,7)

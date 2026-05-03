@@ -2,7 +2,7 @@ dir.create(Sys.getenv("R_LIBS_USER"), recursive=TRUE, showWarnings=FALSE)
 .libPaths(Sys.getenv("R_LIBS_USER"))
 library(ggplot2); library(dplyr); library(tidyr); library(ggpubr)
 
-outdir <- "d:/Varthy/R_output"
+outdir <- "R_output"
 sink(file.path(outdir, "enhanced_analysis.txt"))
 
 cat("================================================================\n")

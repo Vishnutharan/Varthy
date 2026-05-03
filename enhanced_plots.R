@@ -2,7 +2,7 @@ dir.create(Sys.getenv("R_LIBS_USER"), recursive=TRUE, showWarnings=FALSE)
 .libPaths(Sys.getenv("R_LIBS_USER"))
 library(ggplot2); library(dplyr); library(tidyr); library(ggpubr)
 
-outdir <- "d:/Varthy/R_output"
+outdir <- "R_output"
 
 env_growth <- data.frame(
   Week=1:5, IMTA_W=c(331.83,272.3,345,333.67,408.43), Mono_W=c(310.8,281.64,364.6,226.56,351.25),

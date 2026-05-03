@@ -40,9 +40,9 @@ Varthy/
 ## Key Findings
 
 ### Sea Cucumber Growth
-- IMTA mean weight: **330.7g** vs Mono: **311.0g** (p=0.244, Cohen's d=0.25)
+- IMTA mean weight: **328.05g** vs Mono: **299.72g** (p=0.1695)
 - IMTA growth is **more stable** (CV: 14.3% vs 18.1%)
-- Predicted Week 12 weight: IMTA **531g** vs Mono **330g** (61% advantage)
+- **Exploratory Prediction**: Week 12 weight forecast suggests IMTA **531g** vs Mono **330g**, however, 95% prediction intervals are very wide (e.g. IMTA 144–919g), meaning this projection should be treated as a theoretical trajectory rather than a strong forecast.
 - Current study is **underpowered** (power=0.206); need n=249/group or extend to Week 12
 
 ### Phosphorus Anomaly
@@ -73,13 +73,21 @@ Varthy/
 14. Correlation heatmap
 15. Week 4 growth crash analysis
 
+## Limitations
+- **High Individual Variance**: Sea cucumber growth showed high individual variability, leading to non-significant p-values despite observable positive trends in the IMTA system.
+- **Short Duration**: A 5-week monitoring period for sea cucumber growth may be insufficient to fully capture divergent growth trajectories.
+- **Prediction Uncertainty**: The polynomial and linear regression predictions for Week 12 have very wide confidence intervals due to small sample sizes and high variance. These should be interpreted as exploratory models only.
+
 ## Requirements
 - **R** ≥ 4.6.0
 - R packages: `ggplot2`, `dplyr`, `tidyr`, `readxl`, `car`, `moments`, `nortest`, `agricolae`, `emmeans`, `ggpubr`, `lme4`
 
 ## How to Run
 ```r
-# In RStudio or terminal:
+# The easiest way is to run the master script from the terminal:
+Rscript run_all.R
+
+# Alternatively, run them step-by-step:
 Rscript analysis_part1.R
 Rscript analysis_part2.R
 Rscript analysis_plots.R
