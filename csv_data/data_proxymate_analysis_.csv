@@ -1,0 +1,6 @@
+date; 12;03;2026,,,,,,,,,
+,sample ,crusible weight,sample weight,crusible + sample weight(before) own ,crusible + sample weight (after) own,loss moisute ,initial weight (before) muffle furnace,final weight (after ) muffle furnace ,loss ash 
+,site 1  R1,61.0248,4.0306,65.0554,64.7759,0.2795,62.7759,60.832,1.9439
+,              R2,60.401,4,64.401,63.923,0.478,61.923,60.064,1.864
+,site 2   R1,55.0825,4.7293,59.8118,59.0161,0.7957,57.0161,55.3702,1.6459
+,              R2,41.184,4,45.184,44.797,0.387,42.797,41.274,1.523

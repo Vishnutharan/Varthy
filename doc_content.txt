@@ -1,0 +1,916 @@
+3. Results
+
+Growth Performance of Sea Cucumber (Holothuria scabra)
+
+3.1.1 Statistical Assumptions and Normality Assessment
+
+To ensure the validity of parametric statistical analyses, the normality of the H. scabra dataset was evaluated using both numerical and graphical methods.
+
+  Table 1: Shapiro-Wilk Normality Test for Holothuria scabra growth parameters
+
+Parameter
+
+Treatment
+
+W Statistic
+
+p-value
+
+Distribution
+
+Body Weight
+
+IMTA
+
+0.9678
+
+0.2974
+
+Normal
+
+Body Weight
+
+Monoculture
+
+0.9576
+
+0.1332
+
+Normal
+
+Body Length
+
+IMTA
+
+0.9475
+
+0.0617
+
+Normal
+
+Body Length
+
+Monoculture
+
+0.9701
+
+0.3015
+
+Normal
+
+
+
+As shown in Table 1, all p-values were greater than 0.05, leading to the retention of the null hypothesis and confirming that body weight and length were normally distributed. This assessment was further supported by the Q-Q plots (Figure 1), where sample points closely followed the theoretical normal distribution lines for both IMTA and Monoculture treatments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1: Q-Q Normality Plots for Holothuria scabra — Body Weight (IMTA and Monoculture) and Body Length (IMTA and Monoculture). Data points closely following the reference line confirm normality for both parameters across both treatment systems (p > 0.05)
+
+The Q-Q plots were used to assess whether the weight and length data of Holothuria scabra in both IMTA and Monoculture systems follow a normal distribution. Overall, the data points in all four plots closely align with the diagonal reference line, indicating that the datasets are approximately normally distributed. This suggests that the assumption of normality is largely satisfied for both growth parameters across both treatments.
+
+For weight data, slight S-shaped deviations from the reference line are observed in both IMTA and Monoculture systems, indicating mild skewness and the presence of a few extreme values (heavier or lighter individuals). In contrast, the length data shows a stronger alignment with the diagonal line, particularly in the Monoculture group, suggesting a better fit to normal distribution. Since no major deviations are present, the results confirm that the data are suitable for parametric statistical analyses such as t-tests or ANOVA to compare growth differences between the IMTA and Monoculture systems.
+
+
+
+3.1.2. Comparative Growth Analysis: IMTA vs. Monoculture
+
+The growth outcomes for sea cucumbers were compared between the Integrated Multi-Trophic Aquaculture (IMTA) system and the Monoculture control system (Table 2).
+
+Parameter
+
+Treatment
+
+n
+
+Mean
+
+SD
+
+t-value
+
+p-value
+
+Significance
+
+Body Weight (g)
+
+IMTA
+
+42
+
+328.048
+
+92.27
+
+1.3854
+
+0.1695
+
+Not Significant
+
+
+
+Monoculture
+
+46
+
+299.717
+
+99.421
+
+
+
+
+
+(p > 0.05)
+
+Body Length (cm)
+
+IMTA
+
+
+
+42
+
+
+
+16.393
+
+2.062
+
+1.5376
+
+0.1278
+
+
+
+Not Significant
+
+
+
+Monoculture
+
+46
+
+15.652
+
+2.457
+
+
+
+
+
+(p > 0.05)
+
+
+
+Table 2: Descriptive Statistics and Welch’s t-test Results for Holothuria scabra
+
+Descriptive statistics indicated that individuals in the IMTA group reached slightly higher mean weights (328.05± 92.27 g) and lengths (16.39±2.06cm) compared to the Monoculture group. However, Welch's t-test confirmed these differences were not statistically significant (p > 0.05). This lack of significance is visualized in Figure 2, where boxplots show overlapping ranges for both parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2: Comparative boxplots of body weight (g) and body length (cm) of Holothuria scabra between IMTA and Monoculture systems. Overlapping interquartile ranges reflect no statistically significant difference between treatments (Welch's t: p > 0.05).
+
+The boxplots compare the final body weight and body length of Holothuria scabra between IMTA and Monoculture (Control) treatments. Overall, the results show no statistically significant differences between the two systems, as indicated by p-values greater than 0.05 (weight: p = 0.0913; length: p = 0.1067). Although not significant, the IMTA group shows slightly higher median values for both growth parameters, with a median body weight of approximately 355 g compared to 320 g in the Monoculture, and a median body length of about 17 cm compared to 15.8 cm in the control group.
+
+However, there is considerable overlap in the distribution of individual data points in both treatments, indicating high variability among specimens. This suggests that growth differences between individuals were substantial regardless of the farming system. Overall, while the IMTA system shows a tendency toward slightly improved growth performance in terms of both weight and length, these differences are not statistically significant, meaning they may have occurred due to natural variation rather than a clear treatment effect.
+
+
+
+3.1.3. Temporal Growth Dynamics
+
+Weekly monitoring revealed fluctuating growth trends over the five-week experimental period.
+
+
+
+
+
+Figure 3 :
+
+The line graph compares the mean body weight (g) of the sea cucumber Holothuria scabra in IMTA and Monoculture systems over a five-week period. Overall, the IMTA system shows a more stable and progressive growth pattern, with a slight fluctuation in the early weeks followed by a steady increase, reaching the highest mean weight of approximately 410 g by Week 5. In contrast, the Monoculture system exhibits greater variability, increasing until Week 3, followed by a sharp decline in Week 4 (around 225 g) before partially recovering by Week 5.
+
+From Week 4 onwards, sea cucumbers in the IMTA system consistently maintained higher body weights than those in the Monoculture system, with a final difference of about 60 g in Week 5. Although both treatments show relatively large standard deviations, indicating individual variation, the overall trend suggests better growth performance in the IMTA system. This indicates that the integrated multi-trophic environment likely provides more stable conditions and improved nutrient availability, resulting in enhanced growth and higher final biomass of H. scabra compared to the monoculture system.
+
+
+
+
+
+Figure 4:
+
+The line graph illustrates the mean body length (cm) of Holothuria scabra in IMTA and Monoculture systems over a five-week period. Overall, the IMTA system shows a more stable and slightly better growth performance compared to the Monoculture system. Although there is a small decline in Week 2, the IMTA group recovers quickly, reaching a peak of about 17.4 cm in Week 3 and maintaining a stable length of around 17.3 cm by Week 5. In contrast, the Monoculture system shows greater fluctuation, with a notable drop in Week 4 (approximately 14.8 cm) before recovering to about 16.7 cm at the end of the study.
+
+From Week 3 onwards, the IMTA group consistently recorded higher mean body lengths than the Monoculture group, indicating better overall growth performance. Despite relatively large standard deviations in both treatments, suggesting individual variation, the general trend still favors the IMTA system. This indicates that the integrated multi-trophic environment likely provides more stable conditions and improved nutritional support, leading to more consistent longitudinal growth of Holothuria scabra compared to the monoculture system.
+
+
+
+.
+
+
+
+
+
+
+
+3.1.4 Growth Rate Metrics (AGR and SGR)
+
+Efficiency was measured through Absolute Growth Rate (AGR) and Specific Growth Rate (SGR) across specific sampling intervals.
+
+
+
+         Figure 5: Absolute Growth Rate (AGR) of H. scabra
+
+The bar chart illustrates the Absolute Growth Rate (AGR) of Holothuria scabra in IMTA and Monoculture systems across four sampling intervals. Overall, both systems show fluctuating growth patterns, including periods of weight loss and recovery. In the early phase (Wk2–Wk3), both treatments recorded negative growth rates, with the IMTA system showing a sharper decline (-5.953 g/day) compared to the Monoculture (-2.916 g/day). During the recovery phase (Wk3–Wk4), both systems experienced strong positive growth, with Monoculture slightly higher (10.370 g/day) than IMTA (9.087 g/day).
+
+A major divergence occurred in the Wk4–Wk5 interval, where the Monoculture system showed a severe drop in growth (-27.608 g/day), while the IMTA system only recorded a minor decline (-2.266 g/day), indicating greater stability in the IMTA setup. In the final interval (Wk5–Wk6), both systems recovered again, with Monoculture reaching the highest AGR (13.854 g/day) and IMTA recording 8.307 g/day. Overall, although the Monoculture system achieved higher peak growth rates, the IMTA system demonstrated more stable and consistent growth performance, suggesting that the integrated system provides better buffering against extreme growth fluctuations and supports more reliable biomass development.
+
+
+
+                  Figure 6: Specific Growth Rate (SGR) of H. scabra 
+
+The bar chart illustrates the Specific Growth Rate (SGR) of Holothuria scabra (%/day) in IMTA and Monoculture systems across four sampling intervals. Overall, both treatments show fluctuating growth patterns, including phases of weight loss and recovery. During the initial adaptation phase (Wk2–Wk3), both systems recorded negative growth, with the IMTA group showing a slightly greater decline (-1.977%/day) compared to Monoculture (-0.985%/day). In the subsequent phase (Wk3–Wk4), both systems recovered strongly, with Monoculture showing a slightly higher growth rate (3.227%/day) than IMTA (2.958%/day).
+
+A clear difference in stability is observed during the Wk4–Wk5 interval, where the IMTA system remained relatively stable with a minor decline (-0.668%/day), while the Monoculture system experienced a sharp drop in growth (-9.516%/day), indicating strong physiological stress. In the final phase (Wk5–Wk6), both systems recovered, with Monoculture reaching a higher peak growth rate (4.872%/day) compared to IMTA (2.246%/day). Overall, although Monoculture showed higher peak SGR values, the IMTA system demonstrated more stable and consistent growth, suggesting that the integrated multi-trophic approach provides greater resilience and a more stable environment for sustainable sea cucumber production.
+
+
+
+3.2 Seaweed Biomass Production
+
+3.2.1 Normality and Distribution of Seaweed Data
+
+The distribution of weight parameters for K. alvarezii across three replicates was tested using the Shapiro-Wilk method.
+
+Table 3: Shapiro-Wilk Normality Test Results for Kappaphycus alvarezii
+
+Parameter
+
+Group
+
+W Statistic
+
+p-value
+
+Distribution
+
+Initial Weight
+
+Replicate 1
+
+0.9575
+
+0.2676
+
+Normal
+
+ (p > 0.05)
+
+
+
+Replicate 2
+
+0.8932
+
+0.0056
+
+Not Normal
+
+ (p < 0.05) 
+
+
+
+Replicate 3
+
+0.9230
+
+0.0315
+
+Not Normal
+
+ (p < 0.05) 
+
+
+
+Final Weight
+
+Replicate 1
+
+0.9419
+
+0.1017
+
+Normal
+
+ (p > 0.05)
+
+
+
+Replicate 2
+
+0.9583
+
+0.2811
+
+Normal
+
+ (p > 0.05)
+
+
+
+Replicate 3
+
+0.9427
+
+0.1066
+
+Normal
+
+ (p > 0.05)
+
+
+
+Weight Gain
+
+Replicate 1
+
+0.8407
+
+0.0004
+
+Not Normal 
+
+(p < 0.05) 
+
+
+
+Replicate 2
+
+0.8258
+
+0.0002
+
+Not Normal 
+
+(p < 0.05) 
+
+
+
+Replicate 3
+
+0.8541
+
+0.0007
+
+Not Normal 
+
+(p < 0.05) 
+
+
+
+
+
+The results in Table 3 indicate that while final weights were consistently normal across all replicates, weight gain data significantly deviated from normality (p < 0.05).
+
+3.2.2 Biomass Performance and Statistical Comparison
+
+The biomass production was assessed by calculating the mean weight gain across three replicates.
+
+Descriptive Statistics Table
+
+Replicate
+
+n
+
+Mean Weight Gain (g)
+
+SD
+
+SE
+
+Replicate 1
+
+30
+
+7.5
+
+8.448
+
+1.542
+
+Replicate 2
+
+30
+
+6.133
+
+11.236
+
+2.051
+
+Replicate 3
+
+30
+
+4.5
+
+11.054
+
+2.018
+
+
+
+Replicate 1 showed the highest mean weight gain (7.5±8.45g), followed by Replicate 2 and Replicate 3. To determine if the variance between these replicates was significant, a One-Way ANOVA was conducted.
+
+
+
+
+
+
+
+ANOVA Summary Table
+
+Source of Variation
+
+Df
+
+Sum of Squares
+
+Mean Square
+
+F-value
+
+p-value
+
+Between Groups
+
+2
+
+135
+
+67.5
+
+0.6375
+
+0.5311
+
+Within Groups
+
+87
+
+9212
+
+105.89
+
+ 
+
+ 
+
+Total
+
+89
+
+9347
+
+ 
+
+ 
+
+ 
+
+ 
+
+The ANOVA results (F = 0.6375, p = 0.5311) indicate that there were no statistically significant differences in biomass production between the three replicates (p > 0.05), suggesting uniform growth conditions across the seaweed culture units.
+
+
+
+
+
+Figure : 
+
+The bar chart illustrates the survival rate of Kappaphycus alvarezii over a 51-day culture period across three experimental replicates. Overall, the seaweed showed high survival and strong adaptability under the culture conditions, with an average survival rate of 87.78%. Replicates 1 and 2 both recorded identical and high survival rates of 90%, indicating very favourable and stable conditions for growth. In comparison, Replicate 3 showed a slightly lower survival rate of 83.33%, which marginally reduced the overall mean.
+
+Despite this small variation, survival rates remained consistently high across all replicates, staying above 80%, which suggests minimal mortality and suitable environmental conditions throughout the study period. Overall, the results indicate that Kappaphycus alvarezii performed well in the system, demonstrating strong resilience and high survival success under the experimental culture conditions.
+
+
+
+Figure : 
+
+The boxplot illustrates the variation in seedling weight gain (g) of Kappaphycus alvarezii across three experimental replicates. Overall, the statistical analysis shows no significant difference in weight gain between the replicates, as indicated by the One-Way ANOVA result (p = 0.5416), which is well above the 0.05 significance level. This is further supported by the “ns” (non-significant) labels in the pairwise comparisons, confirming that none of the replicates differed meaningfully from each other.
+
+All three replicates show a positive median weight gain, generally ranging between approximately 5 g and 8 g, indicating overall growth across all treatments. However, each replicate also contains noticeable negative outliers, showing that a few individual seedlings experienced weight loss, with Replicate 3 showing the most extreme variation. Despite these outliers and slight differences in data spread, the results suggest that the overall growth performance of Kappaphycus alvarezii was statistically consistent across all replicates.
+
+
+
+Figure : 
+
+The bar chart illustrates the Absolute Growth Rate (AGR) of Kappaphycus alvarezii (g/day) across three experimental replicates over a 51-day culture period. Overall, the seaweed showed healthy growth across all replicates, although clear differences in productivity were observed. Replicate 2 recorded the highest growth rate at 3.255 g/day, closely followed by Replicate 1 at 3.176 g/day, indicating strong and efficient biomass accumulation in these two groups. In contrast, Replicate 3 showed a noticeably lower growth rate of 2.059 g/day, reflecting reduced growth performance.
+
+The lower AGR in Replicate 3 is consistent with earlier observations from survival, SGR, and weight gain analyses, suggesting that certain localized environmental conditions or biological differences may have limited its productivity. Despite this variation, the overall results indicate that Kappaphycus alvarezii performs well under the culture conditions, with Replicates 1 and 2 demonstrating more stable and higher daily biomass production compared to Replicate 3.
+
+
+
+
+
+
+
+
+
+Figure : 
+
+The bar chart illustrates the Specific Growth Rate (SGR) of Kappaphycus alvarezii (%/day) across three experimental replicates over a 51-day culture period. Overall, Replicates 1 and 2 showed higher and relatively similar growth performance, recording SGR values of 0.542%/day and 0.522%/day respectively, indicating efficient and stable biomass production. In contrast, Replicate 3 exhibited a noticeably lower growth rate of 0.365%/day, reflecting reduced growth efficiency compared to the other replicates.
+
+This variation suggests that while the seaweed generally performed well across all treatments, Replicates 1 and 2 provided more favourable growth conditions. The lower performance in Replicate 3 is consistent with earlier observations of higher variability in survival and weight gain, possibly due to environmental differences or seedling quality. Overall, the results indicate healthy growth of Kappaphycus alvarezii, with Replicates 1 and 2 demonstrating superior and more consistent growth efficiency than Replicate 3.
+
+
+
+Figure : 
+
+The boxplot illustrates the mean seedling weight gain (g) of Kappaphycus alvarezii across three experimental replicates. Overall, Replicates 1 and 2 show similar performance, with mean weight gains of 5.4 g and 5.54 g respectively, indicating consistent and relatively higher growth. In contrast, Replicate 3 recorded a much lower mean weight gain of 3.5 g, suggesting poorer overall performance compared to the other replicates.
+
+All three replicates show considerable variability, as indicated by wide whiskers, meaning individual seedlings within each group had highly variable growth responses. While many seedlings exhibited positive growth, some experienced weight loss, contributing to the spread of values. Replicate 3 shows the greatest variability, including a strong negative range reaching nearly -10 g, which explains its lower mean. Overall, the results indicate generally positive growth of Kappaphycus alvarezii, but with notable inconsistency among individual seedlings, particularly in Replicate 3.
+
+
+
+Figure : 
+
+The Q-Q plots assess whether the weight gain data of Kappaphycus alvarezii across three replicates follows a normal distribution. Overall, the majority of data points in all replicates closely align with the diagonal reference line, indicating that the central portion of the dataset is approximately normally distributed. However, all three replicates show clear deviations at the lower end of the distribution, suggesting the presence of negative outliers where some individuals experienced unusually low growth or weight loss.
+
+Among the replicates, Replicate 1 shows relatively stable upper-range values with a few negative outliers, while Replicate 2 displays a mild stepped pattern indicating clustered growth responses. Replicate 3 shows the strongest deviation, with a pronounced extreme outlier reaching very low values. Overall, although the main dataset is largely normal, the presence of these outliers suggests variability in individual performance. These deviations should be carefully considered in statistical analysis, and may require outlier treatment or the use of non-parametric tests to ensure accurate interpretation of growth results.
+
+
+
+
+
+
+
+3.3 Water quality 
+
+
+
+Figure : Mean Total Dissolved Solids (TDS) concentration (ppt) in IMTA and monoculture treatments over time
+
+The line graph illustrates the weekly changes in Total Dissolved Solids (TDS), measured in parts per thousand (ppt), for Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture treatments over a seven-week period. At the beginning of the study (Week 1), both treatments recorded identical TDS levels of approximately 16.5 ppt. During the early phase (Weeks 2–3), TDS levels increased in both systems, with the Monoculture treatment showing slightly higher values (around 18.6 ppt) compared to the IMTA system (approximately 18.1 ppt).
+
+In Week 4, both treatments experienced a decline and briefly converged at similar TDS levels, ranging between approximately 17.0 and 17.3 ppt. A significant divergence was observed in Week 5, where the Monoculture system showed a sharp increase in TDS to about 18.9 ppt, while the IMTA system continued to decline, reaching its lowest level after Week 1 at approximately 16.7 ppt. Toward the end of the study (Week 7), TDS levels increased again in both systems, with Monoculture remaining at its peak (around 18.9 ppt) and IMTA rising to approximately 18.2 ppt.
+
+The variability in TDS values was relatively low during the initial weeks but became substantially higher by Week 7, as indicated by large error bars, suggesting increased fluctuations in dissolved solids toward the end of the experiment. Overall, the IMTA system consistently exhibited lower TDS levels than the Monoculture treatment throughout most of the study, with the most pronounced difference occurring in Week 5. This pattern suggests that the IMTA system may promote more efficient nutrient cycling or enhanced biological uptake of dissolved substances compared to the Monoculture system.
+
+
+
+Figure : Changes in mean pH levels observed in IMTA and monoculture treatments over the duration of the study.
+
+The line graph illustrates the weekly variation in pH levels for Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture treatments over a seven-week period. Overall, both systems maintained an alkaline pH range between approximately 8.1 and 8.4 and followed a similar trend, characterized by a gradual increase toward a peak at Week 4, followed by a sharp decline and a subsequent recovery toward the end of the study. At the beginning (Week 1), both treatments recorded similar pH values (around 8.19 in IMTA and 8.15 in Monoculture). From Week 2 onward, the Monoculture system generally exhibited slightly higher pH levels compared to IMTA.
+
+The most notable point occurred at Week 4, where both treatments reached their maximum pH values, with Monoculture peaking at approximately 8.37 and IMTA slightly lower at around 8.34. Immediately after this peak, both systems experienced a sharp decline in Week 5; however, the decrease was more pronounced in the IMTA system, which dropped to about 8.12, while Monoculture remained relatively higher at approximately 8.23. In the final phase (Week 7), the pH levels of both treatments increased again and converged, stabilizing within a narrow range of about 8.22 to 8.24.
+
+Overall, the IMTA system maintained slightly lower (less alkaline) pH levels compared to the Monoculture system throughout most of the study. The sharp fluctuation observed between Weeks 4 and 5 suggests the occurrence of a notable environmental or biological change within the systems; however, both treatments demonstrated recovery and stability by the end of the experimental period.
+
+
+
+Figure : Weekly variation in mean salinity levels (ppt) comparing IMTA and monoculture aquaculture systems.
+
+The line graph illustrates the weekly changes in salinity levels (measured in ppt) for Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture treatments over a seven-week period. At the start of the study (Week 1), both treatments recorded identical salinity levels of approximately 20.6 ppt. During the early phase (Weeks 2–3), salinity increased in both systems; however, the Monoculture treatment consistently showed higher values (around 23.5 ppt) compared to the IMTA system (approximately 22.9 ppt).
+
+In the mid-phase of the study (Weeks 4–5), the salinity levels of both treatments briefly converged at about 21.5 ppt in Week 4. This was followed by a notable divergence in Week 5, where Monoculture salinity increased sharply to approximately 24.0 ppt, while the IMTA system decreased to its lowest recorded value of about 20.9 ppt. Toward the end of the experiment (Week 7), salinity levels rose again in both treatments, with Monoculture remaining at around 24.0 ppt and IMTA increasing to approximately 23.0 ppt.
+
+The variability in salinity was relatively low during the initial weeks but became significantly higher by Week 7, as indicated by the large error bars, suggesting increased fluctuations likely due to environmental influences or system instability. Overall, the IMTA system maintained comparatively lower salinity levels than the Monoculture treatment from Week 2 onwards, with the most pronounced difference observed in Week 5. This pattern suggests that the IMTA system may have a buffering effect on salinity changes, potentially due to the presence of multiple trophic components that help regulate the aquatic environment.
+
+
+
+
+
+Figure : Fluctuations in mean dissolved oxygen (DO) concentration (mg/L) for IMTA and monoculture treatments over seven weeks.
+
+The line graph illustrates the changes in dissolved oxygen (DO) levels (mg/L) over a seven-week period for Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture treatments. At the beginning of the study (Week 1), the IMTA system recorded a higher DO level (approximately 5.9 mg/L) compared to the Monoculture system (around 4.9 mg/L). Both treatments then showed a sharp increase in DO by Week 2, reaching peak levels and remaining relatively stable through Week 3. During this peak phase, the Monoculture treatment exhibited slightly higher DO concentrations (approximately 8.1 mg/L) than IMTA (around 7.8 mg/L).
+
+From Weeks 4 to 5, a gradual decline in dissolved oxygen was observed in both systems, with Monoculture consistently maintaining marginally higher DO levels than IMTA during this mid-study period (e.g., about 7.7 mg/L in Monoculture compared to 7.2 mg/L in IMTA at Week 5). Toward the end of the experiment (Week 7), DO levels decreased further in both treatments; however, the trend reversed, with the IMTA system recording a higher DO concentration (approximately 6.4 mg/L) than the Monoculture system (around 5.7 mg/L).
+
+The variability, as indicated by the error bars, was notably higher in the Monoculture treatment during Weeks 2 and 3, suggesting less stability in oxygen levels compared to IMTA during the peak period. Overall, the results indicate that while Monoculture achieved slightly higher dissolved oxygen levels during the middle phase of the study, the IMTA system provided comparatively better and more stable oxygen conditions at both the initial and final stages of the experimental period.
+
+
+
+
+
+Figure : Changes in mean conductivity levels (mS) in IMTA and monoculture systems during the study period.
+
+
+
+The graph illustrates the changes in conductivity (measured in mS) over a seven-week period for two aquaculture treatments, Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture. Overall, both treatments display a similar pattern of fluctuation, with an initial increase in conductivity from Week 1 to Week 2, followed by a relatively stable phase around Week 3, a gradual decline toward Week 5, and a sharp increase by Week 7. At the beginning of the experiment, both systems recorded similar conductivity levels (approximately 24.3 mS). However, from Week 2 onward, the Monoculture system consistently exhibited slightly higher conductivity values compared to the IMTA treatment.
+
+In terms of comparison, the difference between the two treatments became more noticeable during Weeks 2 and 3, as well as at Week 5, where IMTA maintained lower conductivity levels (e.g., around 24.4 mS in IMTA versus 25.0 mS in Monoculture at Week 5). Interestingly, both treatments converged at Week 4, recording nearly identical conductivity values of approximately 25.5 mS. Toward the end of the study, both systems showed a marked increase in conductivity, reaching their highest values at Week 7 (about 26.8 mS in IMTA and 27.8 mS in Monoculture), with a wider gap between the two treatments.
+
+The variability in conductivity remained relatively low during the first five weeks, as indicated by smaller error bars, but increased substantially by Week 7, particularly in the Monoculture system, suggesting greater fluctuations in dissolved ion concentration at the later stage of the experiment. Overall, the consistently lower conductivity observed in the IMTA system during several weeks may indicate the influence of biological components, such as seaweed and sea cucumbers, in regulating dissolved ions. In contrast, the higher conductivity in the Monoculture system suggests less biological buffering, while the sharp increase and higher variability at Week 7 may reflect external environmental influences or cumulative system effects toward the end of the culture period.
+
+
+
+Figure : Variation in mean water temperature between IMTA and monoculture treatments over the seven-week experimental period.
+
+The line graph illustrates the weekly variation in water temperature (°C) in two aquaculture systems, Integrated Multi-Trophic Aquaculture (IMTA) and Monoculture, over a seven-week period. Overall, both treatments exhibited a very similar pattern of fluctuation throughout the study. At the beginning (Week 1), water temperature was relatively high in both systems, with Monoculture showing a slightly higher value (approximately 28.7°C) compared to IMTA (around 28.2°C). From Week 1 to Week 4, a clear declining trend was observed in both treatments, reaching the lowest temperatures at Week 4 (about 25.9°C in Monoculture and 25.7°C in IMTA). Following this decline, temperatures increased sharply in Week 5 and then remained relatively stable through Weeks 6 and 7 at approximately 28.1°C in both systems.
+
+In terms of comparison, Monoculture consistently recorded marginally higher temperatures than IMTA during the first four weeks; however, this difference was minimal. From Week 5 onwards, the temperature values of both treatments converged, showing almost identical readings, indicating no meaningful difference between the systems during the later stage of the experiment. Additionally, the variability in temperature, as indicated by the error bars, was highest in Week 1, particularly in the Monoculture system, and gradually decreased over time, suggesting that temperature conditions became more stable as the experiment progressed. Overall, the results indicate that both IMTA and Monoculture systems experienced similar environmental temperature changes, and by the end of the study period, there was no significant difference in water temperature between the two treatments.
+
+Treatment
+
+Week
+
+pH (Mean ± SD)
+
+Salinity (ppt)
+
+TDS (mg/L)
+
+Temperature (°C)
+
+DO (mg/L)
+
+Conductivity (mS/cm)
+
+IMTA
+
+2
+
+8.19 ± 0.08
+
+20.66 ± 0.10
+
+16.51 ± 0.08
+
+28.20 ± 0.26
+
+5.90 ± 0.36
+
+24.33 ± 0.06
+
+
+
+3
+
+8.20 ± 0.04
+
+22.90 ± 0.04
+
+18.13 ± 0.04
+
+26.37 ± 0.12
+
+7.79 ± 0.69
+
+26.67 ± 0.06
+
+
+
+4
+
+8.35 ± 0.02
+
+21.77 ± 0.06
+
+17.32 ± 0.04
+
+25.67 ± 0.12
+
+7.08 ± 1.27
+
+25.47 ± 0.06
+
+
+
+5
+
+8.12 ± 0.02
+
+20.94 ± 0.16
+
+16.66 ± 0.15
+
+28.23 ± 0.06
+
+7.22 ± 1.41
+
+24.33 ± 0.38
+
+
+
+7
+
+8.22 ± 0.03
+
+23.00 ± 3.86
+
+18.18 ± 2.76
+
+28.10 ± 0.10
+
+6.39 ± 0.87
+
+26.73 ± 4.08
+
+Monoculture
+
+2
+
+8.15 ± 0.05
+
+20.64 ± 0.11
+
+16.51 ± 0.08
+
+28.67 ± 0.71
+
+4.89 ± 1.08
+
+24.27 ± 0.12
+
+
+
+3
+
+8.23 ± 0.02
+
+23.53 ± 1.25
+
+18.58 ± 0.90
+
+26.60 ± 0.00
+
+8.05 ± 1.97
+
+27.33 ± 1.27
+
+
+
+4
+
+8.37 ± 0.01
+
+21.76 ± 0.02
+
+17.31 ± 0.01
+
+25.90 ± 0.00
+
+7.64 ± 0.87
+
+25.47 ± 0.06
+
+
+
+5
+
+8.23 ± 0.07
+
+21.34 ± 0.15
+
+16.99 ± 0.12
+
+28.10 ± 0.00
+
+7.68 ± 0.81
+
+25.00 ± 0.20
+
+
+
+7
+
+8.24 ± 0.01
+
+24.02 ± 2.89
+
+18.93 ± 2.06
+
+28.10 ± 0.10
+
+5.71 ± 1.08
+
+27.80 ± 2.77
+
+
+
+Table : Summary of Physico-Chemical Water Quality Parameters
+
+The provided data summarizes the physico-chemical water quality parameters for IMTA (Integrated Multi-Trophic Aquaculture) and Monoculture treatments over a seven-week experimental period. Overall, both systems exhibited similar temporal patterns in temperature and pH, indicating that basic physical parameters followed the same environmental fluctuations in both treatments. Water temperature in both systems showed a declining trend from approximately 28°C at the beginning to a minimum of around 25.6–25.9°C in Week 4, before recovering and stabilizing at about 28.1°C by Week 7. Similarly, pH remained consistently alkaline throughout the study, with both treatments peaking in Week 4 (IMTA: 8.35; Monoculture: 8.37) and then gradually declining and stabilizing. From Week 3 onward, the IMTA system generally maintained slightly lower pH values compared to the Monoculture system.
+
+In terms of ionic and dissolved substances, a strong positive relationship was observed among salinity, total dissolved solids (TDS), and conductivity, with all parameters generally increasing toward the end of the study. However, the IMTA system consistently recorded lower values for salinity, TDS, and conductivity compared to the Monoculture system, particularly during Weeks 5 and 7. For example, in Week 5, salinity was lower in IMTA (20.94 ppt) compared to Monoculture (21.34 ppt), indicating a potential buffering effect in the integrated system. Despite this, both systems showed a noticeable increase in variability by Week 7, as reflected by large standard deviations, suggesting environmental fluctuations or reduced system stability toward the end of the experiment.
+
+Dissolved oxygen (DO) dynamics further highlight differences between the two systems. The IMTA system started with a higher DO concentration (5.90 mg/L) compared to Monoculture (4.89 mg/L) and maintained comparatively better oxygen conditions throughout the study. Both treatments reached peak DO levels in Week 3, with Monoculture slightly higher (8.05 mg/L), but by Week 7, IMTA again recorded higher oxygen levels (6.39 mg/L) than Monoculture (5.71 mg/L), indicating better oxygen retention.
+
+Overall, the comparative analysis shows that while both systems experienced similar environmental trends, the IMTA system demonstrated improved water quality stability, particularly through lower accumulation of salinity, TDS, and conductivity, along with higher dissolved oxygen levels at key stages. These findings suggest that the IMTA system may enhance biological buffering and nutrient cycling efficiency, contributing to more stable aquaculture water conditions compared to the Monoculture system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nutrition 
+
+
+
+Figure : variation in mean nitrite concentration comparing IMTA and monoculture treatments at Week 3 and Week 7 of the culture period
+
+The bar chart illustrates the changes in nitrite concentration (μg/L) between IMTA (Integrated Multi-Trophic Aquaculture) and Monoculture treatments at Week 3 and Week 7. Overall, there is a clear declining trend in nitrite levels in both systems over time, suggesting progressive stabilization of the nitrogen cycle within the aquaculture environments. At Week 3, the IMTA system recorded a higher mean nitrite concentration (approximately 62 μg/L) compared to the Monoculture system (around 57 μg/L). However, the IMTA treatment also showed greater variability at this stage, as indicated by larger error bars, suggesting less uniformity in nitrite distribution during the early phase of the experiment.
+
+By Week 7, nitrite concentrations in both treatments had decreased and became more similar. The IMTA system showed a notable reduction to approximately 49 μg/L, while the Monoculture system recorded a slightly higher value of about 50 μg/L. In addition, variability decreased substantially in both treatments at Week 7, as reflected by smaller error bars, indicating more stable and consistent nitrite levels toward the end of the study. Overall, although the IMTA system initially exhibited higher and more fluctuating nitrite concentrations, it demonstrated a greater reduction by Week 7 compared to the Monoculture system. This suggests improved nitrogen processing efficiency over time in the IMTA system, which is beneficial for maintaining better water quality conditions for cultured organisms such as sea cucumbers and seaweed.
+
+
+
+Figure : Comparison of mean sodium nitrite (NaNO_2) concentration between IMTA and monoculture treatments at Week 3 and Week 7.
+
+The bar chart illustrates the changes in sodium nitrite (NaNO₂) concentration (μg/L) in IMTA and Monoculture treatments at Week 3 and Week 7. Overall, both systems show a gradual reduction in sodium nitrite levels over time, indicating an improvement in water quality as the culture systems mature. At Week 3, both IMTA and Monoculture treatments recorded nearly identical mean concentrations of approximately 85 μg/L. However, a clear difference in system stability is observed at this stage, as the Monoculture treatment exhibited extremely high variability, with error bars ranging from near zero to over 170 μg/L, suggesting substantial inconsistency or instability among replicates. In contrast, the IMTA system showed comparatively stable values with much lower variability at the same time point.
+
+By Week 7, sodium nitrite concentrations in both treatments had declined and stabilized at very similar levels, approximately 73–74 μg/L. Additionally, the error bars for both systems were very small at this stage, indicating that water chemistry became much more consistent and stable by the end of the study period. Although both systems achieved similar final concentrations, the IMTA system demonstrated greater stability earlier in the experiment, while the Monoculture system only stabilized in the later stage after initially showing high fluctuations.
+
+Overall, the results suggest that while both aquaculture systems are effective in reducing sodium nitrite levels over time, the IMTA system provides a more stable and buffered environment during the early stages of culture. In contrast, the Monoculture system exhibited greater initial variability, which could potentially pose stress risks to cultured organisms before stabilizing in the later phase of the study.
+
+
+
+Figure : Figure : Fluctuations in mean nitrite nitrogen (NO_2-N) concentration for IMTA and monoculture treatments over time
+
+
+
+The bar chart illustrates the changes in nitrite nitrogen (NO₂⁻-N) concentration (μg/L) in IMTA and Monoculture treatments at Week 3 and Week 7. Overall, both systems show a clear reduction in nitrite nitrogen levels over time, indicating improved nitrification efficiency and progressive stabilization of the nitrogen cycle within the aquaculture systems. At Week 3, the Monoculture system recorded a significantly higher concentration (approximately 21.5 μg/L) compared to the IMTA system (around 17.3 μg/L), suggesting greater accumulation of nitrite nitrogen in the monoculture environment at the earlier stage of the study.
+
+By Week 7, both treatments had declined and converged to nearly identical levels of approximately 15.0 μg/L. This reflects a stronger reduction in the Monoculture system over time, while the IMTA system showed a more gradual decline. Importantly, the error bars across all treatments and time points were very small, indicating high precision and low variability in the measurements.
+
+Overall, the results indicate that although the IMTA system initially maintained lower and more stable nitrite nitrogen levels, both systems eventually reached similar concentrations by the end of the experiment. This suggests that while Monoculture experienced a sharper reduction over time, the IMTA system provided a more consistently stable nitrogen environment throughout the study period, supporting the potential role of multi-trophic aquaculture in buffering nitrogenous waste accumulation and maintaining water quality stability.
+
+
+
+Figure : Mean phosphorus (P) concentration measured in IMTA and monoculture systems at the third and seventh weeks of the experiment.
+
+The bar chart illustrates the changes in phosphorus (P) concentration (μg/L) in IMTA and Monoculture treatments at Week 3 and Week 7. Overall, the results show contrasting trends between the two systems over time. In the IMTA system, phosphorus concentration decreased from approximately 32 μg/L in Week 3 to about 23 μg/L in Week 7, indicating a progressive reduction in dissolved phosphorus throughout the study period. In contrast, the Monoculture system exhibited an increasing trend, with phosphorus levels rising from around 28 μg/L in Week 3 to approximately 42 μg/L in Week 7, suggesting a continuous accumulation of phosphorus in the water column.
+
+In terms of variability, both treatments showed relatively large error bars at both sampling points, indicating considerable variation among replicates. The Monoculture system, in particular, displayed very high variability in Week 3, with error ranges extending close to zero, and continued to show wide fluctuations by Week 7, reflecting inconsistent phosphorus levels across replicates. By the end of the study, the Monoculture system recorded substantially higher mean phosphorus concentrations compared to the IMTA system.
+
+Overall, the findings suggest that the IMTA system was more effective in reducing and regulating phosphorus concentrations over time, likely due to enhanced nutrient uptake and sequestration within the multi-trophic setup. In contrast, the Monoculture system showed a steady accumulation of phosphorus, increasing the risk of nutrient enrichment in the system. This pattern supports the role of the IMTA configuration, particularly the inclusion of seaweed such as Kappaphycus alvarezii, in acting as a biological nutrient scrubber that improves water quality by absorbing dissolved phosphorus more efficiently than a single-species culture system.
+
+
+
+
+
+Figure : Changes in mean phosphate  concentration observed in IMTA and monoculture treatments during specific sampling weeks
+
+The bar chart illustrates the changes in phosphate (PO₄³⁻) concentration (μg/L) in IMTA and Monoculture treatments at Week 3 and Week 7. The results show contrasting nutrient dynamics between the two systems over time. In the IMTA system, phosphate concentration increased substantially from approximately 86 μg/L in Week 3 to about 127 μg/L in Week 7, indicating a clear accumulation of phosphate over the study period. In contrast, the Monoculture system exhibited a decreasing trend, with phosphate levels declining from around 98 μg/L in Week 3 to approximately 71 μg/L in Week 7.
+
+At the initial measurement (Week 3), the Monoculture system recorded higher phosphate levels than the IMTA system; however, this pattern reversed by Week 7, where the IMTA system showed nearly double the phosphate concentration compared to Monoculture. A notable feature of the data is the variability: the IMTA treatment displayed very large error bars at both time points, indicating high fluctuation in phosphate levels among replicates, whereas the Monoculture system showed minimal variability, reflecting more consistent measurements.
+
+Overall, the findings suggest that the IMTA system experienced increased phosphate accumulation over time, likely due to complex nutrient cycling and organic loading from multiple cultured species that may not have been fully assimilated by the system’s biological components. In contrast, the Monoculture system demonstrated a consistent reduction in phosphate concentration, possibly due to simpler nutrient dynamics and more efficient uptake within a single-species culture environment.
+
+
+
+Figure : Comparison of mean phosphorus pentoxide levels between IMTA and monoculture systems at Week 3 and Week 7
+
+
+
+The bar chart illustrates the changes in Phosphorus Pentoxide concentration (μg/L) between IMTA and Monoculture treatments at Week 3 and Week 7. The results show contrasting trends between the two systems over time. In the IMTA system, Phosphorus Pentoxide levels increased markedly from approximately 64 μg/L in Week 3 to around 95 μg/L by Week 7, indicating a substantial accumulation of phosphorus compounds over the study period. In contrast, the Monoculture system exhibited a decreasing trend, with concentrations declining from about 74 μg/L in Week 3 to approximately 53 μg/L in Week 7.
+
+At Week 3, the Monoculture treatment recorded higher phosphorus levels compared to the IMTA system; however, this pattern reversed by Week 7, where the IMTA system showed nearly double the concentration observed in Monoculture. Despite these differences in trends, both treatments displayed very small error bars at each time point, indicating high precision and low variability in the measurements. Overall, the data suggest that while the Monoculture system was more effective in reducing phosphorus levels over time, the IMTA system experienced a significant increase, possibly due to nutrient accumulation associated with multi-species interactions and metabolic outputs within the integrated system.
+
+
+
+
+
+
+
+
+
+
+

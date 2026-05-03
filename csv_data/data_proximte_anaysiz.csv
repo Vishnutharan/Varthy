@@ -1,0 +1,13 @@
+sample ,crusible weight ,soil ,crusible + soil before ,crusible + soil after ,loss,crusible + sample before furnace ,dry sample ,crusible + sample after furnace,loss
+R 1,14.7107,5.0035,19.7142,19.677,0.0372,16.9615,2.2508,15.5356,1.4259
+R 2,11.8514,5.0143,16.8657,16.8101,0.0556,14.0254,2.174,12.6534,1.372
+R 3,12.5194,5.0091,17.5225,17.4654,0.0571,14.6274,2.108,13.2755,1.3519
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,sample ,MOISTURE %,OM%,,,,
+,,,R 1 ,0.74%,63.35%,,,,
+,,,R 2,1.10%,63.10%,,,,
+,,,R 3 ,1.13%,64.13%,,,,
+,,,Mean ,,,,,,
+,,,SD,,,,,,
