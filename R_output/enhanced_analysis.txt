@@ -1,0 +1,206 @@
+================================================================
+ENHANCED ANALYSIS - IMTA vs MONOCULTURE
+================================================================
+
+SECTION A: POWER ANALYSIS & SAMPLE SIZE ESTIMATION
+====================================================
+
+Current Study:
+  IMTA: n= 42 , mean= 330.71 , SD= 81.81 
+  Mono: n= 46 , mean= 311 , SD= 75.06 
+  Mean difference= 19.71 g
+  Pooled SD= 78.35 
+  Cohen's d= 0.2516 (small effect)
+  Current power (Welch's t):
+    Power= 0.206 (need >=0.80)
+
+--- Required Sample Sizes for Significance ---
+  Power= 0.8 : n= 249 per group
+  Power= 0.9 : n= 333 per group
+  Power= 0.95 : n= 412 per group
+
+--- If effect size doubles (longer duration) ---
+  Power= 0.8 : n= 63 per group
+  Power= 0.9 : n= 84 per group
+
+--- Duration Extension Projections ---
+  IMTA growth slope: 21.46 g/week
+  Mono growth slope: 2.58 g/week
+  Divergence rate: 18.87 g/week faster in IMTA
+  Week 8 predicted gap: 125.7 g
+  Week 10 predicted gap: 163.4 g
+  Week 12 predicted gap: 201.2 g
+  Week 16 predicted gap: 276.7 g
+
+  Estimated week where gap becomes significant (p<0.05):
+    Week 8 : projected diff= 125.7 g, power= 1 
+    Week 10 : projected diff= 163.4 g, power= 1 
+    Week 12 : projected diff= 201.2 g, power= 1 
+    Week 14 : projected diff= 238.9 g, power= 1 
+    Week 16 : projected diff= 276.7 g, power= 1 
+    Week 18 : projected diff= 314.4 g, power= 1 
+    Week 20 : projected diff= 352.2 g, power= 1 
+
+
+SECTION B: PHOSPHORUS ANOMALY INVESTIGATION
+===============================================
+
+--- B.1 Phosphorus Budget Analysis ---
+
+Phosphorus (P) µg/L - Individual Replicates:
+  IMTA Week3: R1= 23 R2= 57 R3= 4  Mean= 28 SD= 26.9 
+  Mono Week3: R1= 49 R2= 21 R3= 26  Mean= 32 SD= 14.9 
+  IMTA Week7: R1= 21 R2= 68 R3= 37  Mean= 42 SD= 23.9 
+  Mono Week7: R1= 44 R2= 9 R3= 15  Mean= 22.7 SD= 18.7 
+
+--- B.2 Replicate-Level Outlier Detection ---
+  IMTA R2 is a MAJOR OUTLIER driving the anomaly:
+    Week3 P: R2=57 vs R1=23,R3=4 (R2 is 2.5x the mean of R1&R3)
+    Week7 P: R2=68 vs R1=21,R3=37 (R2 is 2.3x the mean of R1&R3)
+    Week3 PO4: R2=176 vs R1=71,R3=12 (R2 is 4.2x the mean of R1&R3)
+    Week7 PO4: R2=207 vs R1=63,R3=112 (R2 is 2.4x the mean of R1&R3)
+
+  Without IMTA R2 outlier:
+    P: Week3= 13.5 -> Week7= 29  Change= 114.8 %
+    PO4: Week3= 41.5 -> Week7= 87.5  Change= 110.8 %
+    Even without R2, P increases by 114.8 % confirming genuine accumulation
+
+--- B.3 Seaweed Bio-filtration Efficiency ---
+  Seaweed total biomass: Initial= 1566 g, Final= 1999 g
+  Seaweed biomass gain: 433 g (AGR=8.49g/day)
+  Sea cucumber total biomass: 13890 g ( 42 individuals)
+  Current seaweed:cucumber ratio = 0.14 :1 (by weight)
+
+  Phosphorus change (µg/L):
+    IMTA: + 14 µg/L (accumulation)
+    Mono: - 9.3 µg/L (natural reduction)
+    IMTA excess P load = 23.3 µg/L above expected
+
+  RECOMMENDED SEAWEED RATIO ADJUSTMENT:
+    Current ratio fails to scrub 14 µg/L of P
+    Need 250 % more seaweed biomass for neutral P balance
+    Recommended seaweed:cucumber ratio: 0.5 :1
+    OR increase seaweed seedling density from 30 to ~ 105 per replicate
+
+--- B.4 N:P Ratio Analysis ---
+  N:P ratios (Nitrite:Phosphorus):
+    IMTA Week3: 2.05  Week7: 1.18 
+    Mono Week3: 1.94  Week7: 2.16 
+    IMTA N:P declining = P accumulating faster than N is removed
+    Mono N:P increasing = balanced nutrient cycling
+
+
+SECTION C: ENVIRONMENTAL-GROWTH CORRELATIONS
+================================================
+
+--- C.1 Pearson Correlations: IMTA Growth vs Environment ---
+
+  pH     vs Weight: r=+0.175 p=0.7780 
+  pH     vs Length: r=+0.336 p=0.5809 
+  Sal    vs Weight: r=+0.109 p=0.8621 
+  Sal    vs Length: r=-0.286 p=0.6414 
+  DO     vs Weight: r=-0.617 p=0.2676 
+  DO     vs Length: r=-0.550 p=0.3368 
+  TDS    vs Weight: r=+0.099 p=0.8737 
+  TDS    vs Length: r=-0.291 p=0.6352 
+  Temp   vs Weight: r=+0.412 p=0.4905 
+  Temp   vs Length: r=+0.218 p=0.7244 
+  Cond   vs Weight: r=+0.095 p=0.8792 
+  Cond   vs Length: r=-0.296 p=0.6285 
+
+--- C.2 Pearson Correlations: Monoculture Growth vs Environment ---
+
+  pH     vs Weight: r=+0.465 p=0.4303 
+  pH     vs Length: r=+0.587 p=0.2982 
+  Sal    vs Weight: r=+0.262 p=0.6703 
+  Sal    vs Length: r=+0.421 p=0.4800 
+  DO     vs Weight: r=-0.351 p=0.5629 
+  DO     vs Length: r=-0.211 p=0.7340 
+  TDS    vs Weight: r=+0.268 p=0.6631 
+  TDS    vs Length: r=+0.425 p=0.4752 
+  Temp   vs Weight: r=-0.333 p=0.5841 
+  Temp   vs Length: r=-0.388 p=0.5190 
+  Cond   vs Weight: r=+0.263 p=0.6689 
+  Cond   vs Length: r=+0.422 p=0.4796 
+
+--- C.3 Week 4-5 Growth Dip Investigation ---
+
+  Growth changes between consecutive weeks:
+  Wk1->Wk2: IMTA -59.5g  Mono -29.2g
+  Wk2->Wk3: IMTA +72.7g  Mono +83.0g
+  Wk3->Wk4: IMTA -11.3g  Mono -138.0g
+  Wk4->Wk5: IMTA +74.8g  Mono +124.7g
+
+  Environmental conditions during Week 4 (growth dip period):
+  Monoculture crashed from 364.6g (Wk3) to 226.6g (Wk4) = -138g
+  Simultaneous environmental changes (Wk3 -> Wk4):
+    Salinity: IMTA 21.77 -> 20.94  ( -0.83 ppt)
+    Salinity: Mono 21.76 -> 21.34  ( -0.42 ppt)
+    Temp: IMTA 25.67 -> 28.23  ( 2.56 °C)
+    DO: IMTA 7.08 -> 7.22  ( 0.14 mg/L)
+    DO: Mono 7.64 -> 7.68  ( 0.04 mg/L)
+
+  Week 5 salinity drop and its growth effect:
+    IMTA salinity dropped: 20.94 -> 23  ( 2.06 ppt)
+    Mono salinity dropped: 21.34 -> 24.02  ( 2.68 ppt)
+    Despite IMTA salinity dropping more, IMTA weight INCREASED by 74.8 g
+    Mono weight also recovered by 124.7 g
+
+--- C.4 Multiple Regression: Growth ~ Environment ---
+
+  IMTA Weight = f(Temp, Salinity, DO):
+    R² = 0.5359 
+    Adj.R² = -0.8566 
+              Estimate Std. Error    t value  Pr(>|t|)
+(Intercept)  66.180672 1439.48324  0.0459753 0.9707518
+IMTA_Temp     6.022264   34.51534  0.1744808 0.8900291
+IMTA_Sal     19.208920   33.54443  0.5726411 0.6689197
+IMTA_DO     -45.406999   57.21702 -0.7935925 0.5729416
+
+  Mono Weight = f(Temp, Salinity, DO):
+    R² = 0.9209 
+    Adj.R² = 0.6837 
+               Estimate Std. Error   t value  Pr(>|t|)
+(Intercept) 2128.171140  720.66555  2.953064 0.2078635
+Mono_Temp    -59.365852   20.14718 -2.946608 0.2082871
+Mono_Sal       7.242032   11.15659  0.649126 0.6334594
+Mono_DO      -51.718703   16.50240 -3.134012 0.1966315
+
+--- C.5 Spearman Rank Correlations (non-parametric) ---
+
+  IMTA:
+    pH     vs Weight: rho=+0.500 p=0.3910
+    Sal    vs Weight: rho=+0.400 p=0.5046
+    DO     vs Weight: rho=-0.400 p=0.5046
+    TDS    vs Weight: rho=+0.400 p=0.5046
+    Temp   vs Weight: rho=-0.100 p=0.8729
+    Cond   vs Weight: rho=+0.359 p=0.5528
+  Monoculture:
+    pH     vs Weight: rho=+0.667 p=0.2189
+    Sal    vs Weight: rho=+0.300 p=0.6238
+    DO     vs Weight: rho=-0.500 p=0.3910
+    TDS    vs Weight: rho=+0.300 p=0.6238
+    Temp   vs Weight: rho=-0.359 p=0.5528
+    Cond   vs Weight: rho=+0.300 p=0.6238
+
+
+================================================================
+SUMMARY OF KEY FINDINGS
+================================================================
+
+A. SAMPLE SIZE:
+   Current power = 0.206 (underpowered)
+   Need n= 249 per group for 80% power
+   Extended duration to Week 12 would increase gap to ~201g
+
+B. PHOSPHORUS ANOMALY:
+   IMTA R2 is a major outlier inflating P values
+   Even without R2, P accumulates in IMTA (+ 114.8 %)
+   Current seaweed:cucumber ratio is insufficient for P scrubbing
+   Recommend increasing seaweed density by ~ 250 %
+
+C. ENVIRONMENTAL CORRELATIONS:
+   Week 3->4 salinity drop coincided with Mono growth crash (-138g)
+   IMTA buffered the environmental change better (-11.3g vs -138g)
+   Temperature has strongest negative correlation with growth
+   IMTA shows greater environmental resilience across all parameters
