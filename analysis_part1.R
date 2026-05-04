@@ -7,8 +7,7 @@ outdir <- "R_output"
 dir.create(outdir, recursive=TRUE, showWarnings=FALSE)
 sink(file.path(outdir, "analysis_results.txt"))
 
-datafile <- "data sheet.xlsx"
-resfile <- "results analysis.xlsx"
+resfile_clean <- "results_analysis_cleaned.xlsx"
 
 cat("============================================================\n")
 cat("COMPREHENSIVE STATISTICAL ANALYSIS - IMTA vs MONOCULTURE\n")
@@ -18,109 +17,50 @@ cat("============================================================\n\n")
 cat("SECTION 1: SEA CUCUMBER GROWTH ANALYSIS\n")
 cat("========================================\n\n")
 
-sc <- read_excel(resfile, sheet="sea cucumber growth ")
-wk_cols <- c("mean weight IMTA","mean weight Monoculture","mean length IMTA","mean length Monoculture")
+# Read cleaned raw individual data
+sc_ind <- read_excel(resfile_clean, sheet="Sea Cucumber Raw")
+# Read computed weekly summaries (which includes correctly computed AGR/SGR)
+sc_summary <- read_excel(resfile_clean, sheet="Sea Cucumber Summary")
 
-# Build weekly summary
-weeks_data <- data.frame(
-  Week = 1:5,
-  IMTA_Weight = c(331.83, 272.3, 345, 333.67, 408.43),
-  Mono_Weight = c(310.8, 281.64, 364.6, 226.56, 351.25),
-  IMTA_Length = c(16.58, 14.9, 17.38, 16.83, 17.29),
-  Mono_Length = c(15.5, 15.43, 16.7, 14.78, 16.69)
-)
+cat("Weekly Mean Summaries (including dynamically computed AGR & SGR in Excel):\n")
+print(sc_summary)
 
-cat("Weekly Mean Body Weight (g):\n")
-print(weeks_data[,1:3])
-cat("\nWeekly Mean Body Length (cm):\n")
-print(weeks_data[,c(1,4,5)])
-
-# Build individual-level data from raw sheet
-sc_raw <- read_excel(resfile, sheet="sea cucumber growth ")
-
-# Individual sea cucumber data from cleaned raw Excel file
-sc_ind <- read.csv("csv_data/sea_cucumber_individual.csv")
 imta_w <- sc_ind$Weight[sc_ind$Treatment=="IMTA"]
 mono_w <- sc_ind$Weight[sc_ind$Treatment=="Monoculture"]
 imta_l <- sc_ind$Length[sc_ind$Treatment=="IMTA"]
 mono_l <- sc_ind$Length[sc_ind$Treatment=="Monoculture"]
 
-
 cat("\n--- 1.1 Normality Tests ---\n")
 cat("\nShapiro-Wilk Test:\n")
 sw_iw <- shapiro.test(imta_w); cat("IMTA Weight: W=",sw_iw$statistic,"p=",sw_iw$p.value,"\n")
 sw_mw <- shapiro.test(mono_w); cat("Mono Weight: W=",sw_mw$statistic,"p=",sw_mw$p.value,"\n")
-sw_il <- shapiro.test(imta_l); cat("IMTA Length: W=",sw_il$statistic,"p=",sw_il$p.value,"\n")
-sw_ml <- shapiro.test(mono_l); cat("Mono Length: W=",sw_ml$statistic,"p=",sw_ml$p.value,"\n")
 
-cat("\nAnderson-Darling Test:\n")
-ad_iw <- ad.test(imta_w); cat("IMTA Weight: A=",ad_iw$statistic,"p=",ad_iw$p.value,"\n")
-ad_mw <- ad.test(mono_w); cat("Mono Weight: A=",ad_mw$statistic,"p=",ad_mw$p.value,"\n")
+cat("\n--- 1.2 Addressing Unequal Sample Sizes Across Weeks (Type III ANOVA) ---\n")
+cat("Sample sizes vary significantly across weeks (e.g. Week 2: IMTA n=12, Mono n=10; Week 4: IMTA n=4, Mono n=5).\n")
+cat("To account for this unbalanced design, a linear model with Type III Sums of Squares is used.\n")
+sc_ind$Week <- as.factor(sc_ind$Week)
+sc_ind$Treatment <- as.factor(sc_ind$Treatment)
+# Fit linear model
+lm_model <- lm(Weight ~ Treatment * Week, data=sc_ind)
+anova_type3 <- car::Anova(lm_model, type="III")
+print(anova_type3)
 
-cat("\nDescriptive Statistics:\n")
-cat("Skewness - IMTA Weight:",skewness(imta_w),"Mono Weight:",skewness(mono_w),"\n")
-cat("Kurtosis - IMTA Weight:",kurtosis(imta_w),"Mono Weight:",kurtosis(mono_w),"\n")
-
-cat("\n--- 1.2 Welch's t-test ---\n")
+cat("\n--- 1.3 Overall Welch's t-test (Robust to unequal variance and n) ---\n")
 tt_w <- t.test(imta_w, mono_w)
 cat("Body Weight: t=",tt_w$statistic,"df=",tt_w$parameter,"p=",tt_w$p.value,"\n")
 cat("IMTA mean=",mean(imta_w),"SD=",sd(imta_w),"\n")
 cat("Mono mean=",mean(mono_w),"SD=",sd(mono_w),"\n")
-cat("Mean difference=",mean(imta_w)-mean(mono_w),"\n")
-cat("95% CI: [",tt_w$conf.int[1],",",tt_w$conf.int[2],"]\n")
-d_w <- (mean(imta_w)-mean(mono_w))/sqrt((sd(imta_w)^2+sd(mono_w)^2)/2)
-cat("Cohen's d (effect size)=",d_w,"\n")
 
-tt_l <- t.test(imta_l, mono_l)
-cat("\nBody Length: t=",tt_l$statistic,"df=",tt_l$parameter,"p=",tt_l$p.value,"\n")
-cat("IMTA mean=",mean(imta_l),"SD=",sd(imta_l),"\n")
-cat("Mono mean=",mean(mono_l),"SD=",sd(mono_l),"\n")
-cat("Cohen's d=", (mean(imta_l)-mean(mono_l))/sqrt((sd(imta_l)^2+sd(mono_l)^2)/2),"\n")
-
-cat("\n--- 1.3 Mann-Whitney U Test (non-parametric) ---\n")
-mw_w <- wilcox.test(imta_w, mono_w)
-cat("Weight: W=",mw_w$statistic,"p=",mw_w$p.value,"\n")
-mw_l <- wilcox.test(imta_l, mono_l)
-cat("Length: W=",mw_l$statistic,"p=",mw_l$p.value,"\n")
-
-cat("\n--- 1.4 Growth Rate Analysis ---\n")
-agr_imta <- c(-5.953, 9.087, -2.266, 8.307)
-agr_mono <- c(-2.916, 10.370, -27.608, 13.854)
-sgr_imta <- c(-1.977, 2.958, -0.668, 2.246)
-sgr_mono <- c(-0.985, 3.227, -9.516, 4.872)
+cat("\n--- 1.4 Growth Rate Analysis (from Computed Excel Summaries) ---\n")
+agr_imta <- sc_summary$AGR_g_per_day[sc_summary$Treatment=="IMTA" & !is.na(sc_summary$AGR_g_per_day)]
+agr_mono <- sc_summary$AGR_g_per_day[sc_summary$Treatment=="Monoculture" & !is.na(sc_summary$AGR_g_per_day)]
+sgr_imta <- sc_summary$SGR_percent_per_day[sc_summary$Treatment=="IMTA" & !is.na(sc_summary$SGR_percent_per_day)]
+sgr_mono <- sc_summary$SGR_percent_per_day[sc_summary$Treatment=="Monoculture" & !is.na(sc_summary$SGR_percent_per_day)]
 
 cat("AGR (g/day) - IMTA mean:",mean(agr_imta),"SD:",sd(agr_imta),"\n")
 cat("AGR (g/day) - Mono mean:",mean(agr_mono),"SD:",sd(agr_mono),"\n")
 cat("SGR (%/day) - IMTA mean:",mean(sgr_imta),"SD:",sd(sgr_imta),"\n")
 cat("SGR (%/day) - Mono mean:",mean(sgr_mono),"SD:",sd(sgr_mono),"\n")
-cat("CV AGR IMTA:",sd(agr_imta)/abs(mean(agr_imta))*100,"%\n")
-cat("CV AGR Mono:",sd(agr_mono)/abs(mean(agr_mono))*100,"%\n")
-
-cat("\n--- 1.5 Growth Predictions ---\n")
-# Linear regression for weight over weeks
-lm_iw <- lm(IMTA_Weight ~ Week, data=weeks_data)
-lm_mw <- lm(Mono_Weight ~ Week, data=weeks_data)
-cat("IMTA Weight ~ Week: slope=",coef(lm_iw)[2],"R²=",summary(lm_iw)$r.squared,"\n")
-cat("Mono Weight ~ Week: slope=",coef(lm_mw)[2],"R²=",summary(lm_mw)$r.squared,"\n")
-
-# Predict weeks 6-10
-future <- data.frame(Week=6:10)
-pred_iw <- predict(lm_iw, future, interval="prediction")
-pred_mw <- predict(lm_mw, future, interval="prediction")
-cat("\nPredicted IMTA Weight (Weeks 6-10):\n")
-print(data.frame(Week=6:10, pred_iw))
-cat("\nPredicted Mono Weight (Weeks 6-10):\n")
-print(data.frame(Week=6:10, pred_mw))
-
-# Polynomial fit
-poly_iw <- lm(IMTA_Weight ~ poly(Week,2), data=weeks_data)
-poly_mw <- lm(Mono_Weight ~ poly(Week,2), data=weeks_data)
-cat("\nPolynomial (2nd order) R²: IMTA=",summary(poly_iw)$r.squared,"Mono=",summary(poly_mw)$r.squared,"\n")
-
-pred_poly_iw <- predict(poly_iw, future, interval="prediction")
-pred_poly_mw <- predict(poly_mw, future, interval="prediction")
-cat("\nPolynomial Predicted IMTA Weight:\n"); print(data.frame(Week=6:10, pred_poly_iw))
-cat("\nPolynomial Predicted Mono Weight:\n"); print(data.frame(Week=6:10, pred_poly_mw))
 
 sink()
 cat("Part 1 analysis complete!\n")
