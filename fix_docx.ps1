@@ -23,10 +23,15 @@ New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
 
 [System.IO.Compression.ZipFile]::ExtractToDirectory($DocxPath, $TempDir)
 $DocumentXmlPath = Join-Path $TempDir 'word\document.xml'
+$RelationshipsPath = Join-Path $TempDir 'word\_rels\document.xml.rels'
+$ContentTypesPath = Join-Path $TempDir '[Content_Types].xml'
+$StudyMapPath = Join-Path $WorkspaceDir 'assets\study_area_map.jpeg'
 [xml]$Doc = Get-Content -LiteralPath $DocumentXmlPath -Raw
 $Ns = New-Object System.Xml.XmlNamespaceManager($Doc.NameTable)
 $Ns.AddNamespace('w', $WNs)
+$Ns.AddNamespace('r', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships')
 $Summary = Get-Content -LiteralPath $SummaryPath -Raw | ConvertFrom-Json
+if (-not (Test-Path -LiteralPath $StudyMapPath)) { throw "Missing study area map asset: $StudyMapPath" }
 
 function Get-NodeText($Node) {
   (($Node.SelectNodes('.//w:t', $Ns) | ForEach-Object { $_.'#text' }) -join '') -replace '\s+', ' '
@@ -66,6 +71,22 @@ function Set-RowText($Row, [string[]]$Values) {
   }
 }
 
+function New-TextParagraph([string]$Text, [bool]$Bold = $false) {
+  $paragraph = $Doc.CreateElement('w', 'p', $WNs)
+  $run = $Doc.CreateElement('w', 'r', $WNs)
+  if ($Bold) {
+    $rPr = $Doc.CreateElement('w', 'rPr', $WNs)
+    [void]$rPr.AppendChild($Doc.CreateElement('w', 'b', $WNs))
+    [void]$run.AppendChild($rPr)
+  }
+  $textNode = $Doc.CreateElement('w', 't', $WNs)
+  [void]$textNode.SetAttribute('space', 'http://www.w3.org/XML/1998/namespace', 'preserve')
+  $textNode.InnerText = $Text
+  [void]$run.AppendChild($textNode)
+  [void]$paragraph.AppendChild($run)
+  return $paragraph
+}
+
 function Replace-ParagraphContaining([string]$Needle, [string]$Replacement) {
   foreach ($paragraph in @($Doc.SelectNodes('//w:body//w:p', $Ns))) {
     if ((Get-NodeText $paragraph).Contains($Needle)) {
@@ -90,6 +111,83 @@ $LengthMono = $Sc | Where-Object { $_.Parameter -eq 'Body Length (cm)' -and $_.T
 $SeaweedReps = @($Summary.seaweed.summary | Where-Object { $_.Replicate -ne 'Overall' })
 $SeaweedOverall = $Summary.seaweed.summary | Where-Object { $_.Replicate -eq 'Overall' } | Select-Object -First 1
 $Anova = $Summary.seaweed.anova
+
+# Insert a reproducible Material and Methodology study-area section before Results.
+$Body = $Doc.SelectSingleNode('//w:body', $Ns)
+$ResultsNode = $null
+foreach ($child in @($Body.ChildNodes)) {
+  if ($child.LocalName -eq 'p' -and (Get-NodeText $child).Trim() -eq '3. Results') {
+    $ResultsNode = $child
+    break
+  }
+}
+if (-not $ResultsNode) { throw 'Could not find the "3. Results" insertion point in result.docx.' }
+foreach ($child in @($Body.ChildNodes)) {
+  if ($child -eq $ResultsNode) { break }
+  [void]$Body.RemoveChild($child)
+}
+
+[xml]$Rels = Get-Content -LiteralPath $RelationshipsPath -Raw
+$RelNs = New-Object System.Xml.XmlNamespaceManager($Rels.NameTable)
+$RelNs.AddNamespace('rel', 'http://schemas.openxmlformats.org/package/2006/relationships')
+$existingStudyRel = $Rels.SelectSingleNode("//rel:Relationship[@Target='media/study_area_map.jpeg']", $RelNs)
+if ($existingStudyRel) {
+  $StudyRelId = $existingStudyRel.Id
+} else {
+  $maxRel = 0
+  foreach ($rel in $Rels.Relationships.Relationship) {
+    if ($rel.Id -match '^rId(\d+)$') { $maxRel = [Math]::Max($maxRel, [int]$Matches[1]) }
+  }
+  $StudyRelId = "rId$($maxRel + 1)"
+  $newRel = $Rels.CreateElement('Relationship', 'http://schemas.openxmlformats.org/package/2006/relationships')
+  [void]$newRel.SetAttribute('Id', $StudyRelId)
+  [void]$newRel.SetAttribute('Type', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image')
+  [void]$newRel.SetAttribute('Target', 'media/study_area_map.jpeg')
+  [void]$Rels.DocumentElement.AppendChild($newRel)
+}
+$mediaDir = Join-Path $TempDir 'word\media'
+New-Item -ItemType Directory -Path $mediaDir -Force | Out-Null
+Copy-Item -LiteralPath $StudyMapPath -Destination (Join-Path $mediaDir 'study_area_map.jpeg') -Force
+$Rels.Save($RelationshipsPath)
+
+[xml]$ContentTypes = Get-Content -LiteralPath $ContentTypesPath -Raw
+$CtNs = New-Object System.Xml.XmlNamespaceManager($ContentTypes.NameTable)
+$CtNs.AddNamespace('ct', 'http://schemas.openxmlformats.org/package/2006/content-types')
+if (-not $ContentTypes.SelectSingleNode("//ct:Default[@Extension='jpeg']", $CtNs)) {
+  $default = $ContentTypes.CreateElement('Default', 'http://schemas.openxmlformats.org/package/2006/content-types')
+  [void]$default.SetAttribute('Extension', 'jpeg')
+  [void]$default.SetAttribute('ContentType', 'image/jpeg')
+  [void]$ContentTypes.DocumentElement.AppendChild($default)
+  $ContentTypes.Save($ContentTypesPath)
+}
+
+$ImageTemplate = $Doc.SelectSingleNode('//w:body//w:p[.//w:drawing]', $Ns)
+if (-not $ImageTemplate) { throw 'Could not find an existing image paragraph to clone for the study-area map.' }
+$StudyImageParagraph = $ImageTemplate.CloneNode($true)
+$blips = @($StudyImageParagraph.GetElementsByTagName('blip', 'http://schemas.openxmlformats.org/drawingml/2006/main'))
+foreach ($blip in $blips) {
+  [void]$blip.SetAttribute('embed', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships', $StudyRelId)
+}
+$docPrs = @($StudyImageParagraph.GetElementsByTagName('docPr', 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing'))
+$maxDocPr = 0
+foreach ($docPr in $Doc.GetElementsByTagName('docPr', 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing')) {
+  if ($docPr.id) { $maxDocPr = [Math]::Max($maxDocPr, [int]$docPr.id) }
+}
+foreach ($docPr in $docPrs) {
+  [void]$docPr.SetAttribute('id', "$($maxDocPr + 1)")
+  [void]$docPr.SetAttribute('name', 'Study Area Map')
+}
+
+$MethodNodes = @(
+  (New-TextParagraph '2. Material and Methodology' $true),
+  (New-TextParagraph '2.1 Area of Study' $true),
+  (New-TextParagraph 'The sample collection and culture study area was located along the coastal waters of the Jaffna Peninsula, Sri Lanka, associated with the Palk Strait near Velanai/Thurayoor, Jaffna. The map reference provided for the sampling site shows approximately 9°40''01.6"N, 80°01''52.9"E (9.6671°N, 80.0314°E). The broader study area is within the northern coastal region of Sri Lanka, approximately 79.50°E-81.25°E and 9.25°N-10.00°N.' $false),
+  $StudyImageParagraph,
+  (New-TextParagraph 'Figure M1: Map reference showing the sample collection area near the Palk Strait, Jaffna Peninsula, Sri Lanka.' $true)
+)
+foreach ($node in $MethodNodes) {
+  [void]$Body.InsertBefore($node, $ResultsNode)
+}
 
 $Tables = @($Doc.SelectNodes('//w:tbl', $Ns))
 if ($Tables.Count -lt 6) { throw "Expected at least 6 tables; found $($Tables.Count)." }
