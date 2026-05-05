@@ -1,0 +1,412 @@
+{
+  "generatedBy": "clean_excel.js",
+  "sourceWorkbook": "C:\\Users\\karun\\OneDrive\\Desktop\\Var\\results analysis.xlsx",
+  "seaCucumber": {
+    "rawCount": 88,
+    "descriptive": [
+      {
+        "Parameter": "Body Weight (g)",
+        "Treatment": "IMTA",
+        "n": 42,
+        "Mean": 332.071,
+        "SD": 88.378,
+        "t": 1.7076,
+        "df": 86,
+        "p": 0.0913
+      },
+      {
+        "Parameter": "Body Weight (g)",
+        "Treatment": "Monoculture",
+        "n": 46,
+        "Mean": 298.326,
+        "SD": 97.008,
+        "t": null,
+        "df": null,
+        "p": null
+      },
+      {
+        "Parameter": "Body Length (cm)",
+        "Treatment": "IMTA",
+        "n": 42,
+        "Mean": 16.429,
+        "SD": 2.032,
+        "t": 1.6302,
+        "df": 85.888,
+        "p": 0.1067
+      },
+      {
+        "Parameter": "Body Length (cm)",
+        "Treatment": "Monoculture",
+        "n": 46,
+        "Mean": 15.674,
+        "SD": 2.31,
+        "t": null,
+        "df": null,
+        "p": null
+      }
+    ],
+    "weeklySummary": [
+      {
+        "AnalysisWeek": 1,
+        "SampleWeek": 2,
+        "Treatment": "IMTA",
+        "n": 12,
+        "Mean_Weight_g": 331.833,
+        "SD_Weight_g": 84.392,
+        "Mean_Length_cm": 16.583,
+        "SD_Length_cm": 2.076
+      },
+      {
+        "AnalysisWeek": 2,
+        "SampleWeek": 3,
+        "Treatment": "IMTA",
+        "n": 10,
+        "Mean_Weight_g": 272.3,
+        "SD_Weight_g": 90.317,
+        "Mean_Length_cm": 14.9,
+        "SD_Length_cm": 2.196,
+        "Weight_Change_g": -59.533,
+        "AGR_g_per_day": -8.505,
+        "SGR_percent_per_day": -2.825
+      },
+      {
+        "AnalysisWeek": 3,
+        "SampleWeek": 4,
+        "Treatment": "IMTA",
+        "n": 4,
+        "Mean_Weight_g": 345,
+        "SD_Weight_g": 60.083,
+        "Mean_Length_cm": 17.375,
+        "SD_Length_cm": 1.436,
+        "Weight_Change_g": 72.7,
+        "AGR_g_per_day": 10.386,
+        "SGR_percent_per_day": 3.381
+      },
+      {
+        "AnalysisWeek": 4,
+        "SampleWeek": 5,
+        "Treatment": "IMTA",
+        "n": 9,
+        "Mean_Weight_g": 333.667,
+        "SD_Weight_g": 72.447,
+        "Mean_Length_cm": 16.833,
+        "SD_Length_cm": 1.803,
+        "Weight_Change_g": -11.333,
+        "AGR_g_per_day": -1.619,
+        "SGR_percent_per_day": -0.477
+      },
+      {
+        "AnalysisWeek": 5,
+        "SampleWeek": 6,
+        "Treatment": "IMTA",
+        "n": 7,
+        "Mean_Weight_g": 408.429,
+        "SD_Weight_g": 80.033,
+        "Mean_Length_cm": 17.286,
+        "SD_Length_cm": 1.439,
+        "Weight_Change_g": 74.762,
+        "AGR_g_per_day": 10.68,
+        "SGR_percent_per_day": 2.888
+      },
+      {
+        "AnalysisWeek": 1,
+        "SampleWeek": 2,
+        "Treatment": "Monoculture",
+        "n": 10,
+        "Mean_Weight_g": 310.8,
+        "SD_Weight_g": 52.875,
+        "Mean_Length_cm": 15.5,
+        "SD_Length_cm": 1.155
+      },
+      {
+        "AnalysisWeek": 2,
+        "SampleWeek": 3,
+        "Treatment": "Monoculture",
+        "n": 14,
+        "Mean_Weight_g": 281.643,
+        "SD_Weight_g": 106.672,
+        "Mean_Length_cm": 15.429,
+        "SD_Length_cm": 2.51,
+        "Weight_Change_g": -29.157,
+        "AGR_g_per_day": -4.165,
+        "SGR_percent_per_day": -1.407
+      },
+      {
+        "AnalysisWeek": 3,
+        "SampleWeek": 4,
+        "Treatment": "Monoculture",
+        "n": 5,
+        "Mean_Weight_g": 364.6,
+        "SD_Weight_g": 106.596,
+        "Mean_Length_cm": 16.7,
+        "SD_Length_cm": 2.636,
+        "Weight_Change_g": 82.957,
+        "AGR_g_per_day": 11.851,
+        "SGR_percent_per_day": 3.688
+      },
+      {
+        "AnalysisWeek": 4,
+        "SampleWeek": 5,
+        "Treatment": "Monoculture",
+        "n": 9,
+        "Mean_Weight_g": 226.556,
+        "SD_Weight_g": 84.91,
+        "Mean_Length_cm": 14.778,
+        "SD_Length_cm": 2.705,
+        "Weight_Change_g": -138.044,
+        "AGR_g_per_day": -19.721,
+        "SGR_percent_per_day": -6.797
+      },
+      {
+        "AnalysisWeek": 5,
+        "SampleWeek": 6,
+        "Treatment": "Monoculture",
+        "n": 8,
+        "Mean_Weight_g": 351.25,
+        "SD_Weight_g": 85.421,
+        "Mean_Length_cm": 16.688,
+        "SD_Length_cm": 2.329,
+        "Weight_Change_g": 124.694,
+        "AGR_g_per_day": 17.813,
+        "SGR_percent_per_day": 6.264
+      }
+    ],
+    "normalityScreening": [
+      {
+        "Parameter": "Body Weight",
+        "Treatment": "IMTA",
+        "Method": "Jarque-Bera",
+        "Statistic": 1.288,
+        "p": 0.5252
+      },
+      {
+        "Parameter": "Body Weight",
+        "Treatment": "Monoculture",
+        "Method": "Jarque-Bera",
+        "Statistic": 1.2877,
+        "p": 0.5253
+      },
+      {
+        "Parameter": "Body Length",
+        "Treatment": "IMTA",
+        "Method": "Jarque-Bera",
+        "Statistic": 3.7904,
+        "p": 0.1503
+      },
+      {
+        "Parameter": "Body Length",
+        "Treatment": "Monoculture",
+        "Method": "Jarque-Bera",
+        "Statistic": 0.4876,
+        "p": 0.7836
+      }
+    ]
+  },
+  "seaweed": {
+    "rawCount": 90,
+    "summary": [
+      {
+        "Replicate": "Replicate 1",
+        "n": 30,
+        "Initial_Total_g": 509,
+        "Final_Total_g": 671,
+        "Biomass_Gain_g": 162,
+        "Percent_Gain": 31.83,
+        "Survival_Percent": 90,
+        "Mean_Weight_Gain_g": 5.4,
+        "SD_Weight_Gain_g": 6.173,
+        "SE_Weight_Gain_g": 1.127
+      },
+      {
+        "Replicate": "Replicate 2",
+        "n": 30,
+        "Initial_Total_g": 544,
+        "Final_Total_g": 710,
+        "Biomass_Gain_g": 166,
+        "Percent_Gain": 30.51,
+        "Survival_Percent": 90,
+        "Mean_Weight_Gain_g": 5.533,
+        "SD_Weight_Gain_g": 5.917,
+        "SE_Weight_Gain_g": 1.08
+      },
+      {
+        "Replicate": "Replicate 3",
+        "n": 30,
+        "Initial_Total_g": 513,
+        "Final_Total_g": 618,
+        "Biomass_Gain_g": 105,
+        "Percent_Gain": 20.47,
+        "Survival_Percent": 83.33,
+        "Mean_Weight_Gain_g": 3.5,
+        "SD_Weight_Gain_g": 10.744,
+        "SE_Weight_Gain_g": 1.962
+      },
+      {
+        "Replicate": "Overall",
+        "n": 90,
+        "Initial_Total_g": 1566,
+        "Final_Total_g": 1999,
+        "Biomass_Gain_g": 433,
+        "Percent_Gain": 27.65,
+        "Survival_Percent": 87.78,
+        "Mean_Weight_Gain_g": 4.811,
+        "SD_Weight_Gain_g": 7.894,
+        "SE_Weight_Gain_g": 0.832
+      }
+    ],
+    "anova": {
+      "dfBetween": 2,
+      "dfWithin": 87,
+      "ssBetween": 77.622,
+      "ssWithin": 5468.167,
+      "msBetween": 38.811,
+      "msWithin": 62.852,
+      "f": 0.6175,
+      "p": 0.5416
+    }
+  },
+  "waterQuality": [
+    {
+      "SampleWeek": 2,
+      "Treatment": "IMTA",
+      "pH": 8.193,
+      "TDS_ppt": 16.513,
+      "Salinity_ppt": 20.66,
+      "Temperature_C": 28.2,
+      "DO_mg_L": 5.902,
+      "Conductivity_mS_cm": 24.333
+    },
+    {
+      "SampleWeek": 2,
+      "Treatment": "Monoculture",
+      "pH": 8.153,
+      "TDS_ppt": 16.51,
+      "Salinity_ppt": 20.643,
+      "Temperature_C": 28.667,
+      "DO_mg_L": 4.885,
+      "Conductivity_mS_cm": 24.267
+    },
+    {
+      "SampleWeek": 3,
+      "Treatment": "IMTA",
+      "pH": 8.2,
+      "TDS_ppt": 18.133,
+      "Salinity_ppt": 22.903,
+      "Temperature_C": 26.367,
+      "DO_mg_L": 7.793,
+      "Conductivity_mS_cm": 26.667
+    },
+    {
+      "SampleWeek": 3,
+      "Treatment": "Monoculture",
+      "pH": 8.233,
+      "TDS_ppt": 18.577,
+      "Salinity_ppt": 23.527,
+      "Temperature_C": 26.6,
+      "DO_mg_L": 8.05,
+      "Conductivity_mS_cm": 27.333
+    },
+    {
+      "SampleWeek": 4,
+      "Treatment": "IMTA",
+      "pH": 8.35,
+      "TDS_ppt": 17.323,
+      "Salinity_ppt": 21.773,
+      "Temperature_C": 25.667,
+      "DO_mg_L": 7.083,
+      "Conductivity_mS_cm": 25.467
+    },
+    {
+      "SampleWeek": 4,
+      "Treatment": "Monoculture",
+      "pH": 8.37,
+      "TDS_ppt": 17.313,
+      "Salinity_ppt": 21.757,
+      "Temperature_C": 25.9,
+      "DO_mg_L": 7.637,
+      "Conductivity_mS_cm": 25.467
+    },
+    {
+      "SampleWeek": 5,
+      "Treatment": "IMTA",
+      "pH": 8.123,
+      "TDS_ppt": 16.66,
+      "Salinity_ppt": 20.937,
+      "Temperature_C": 28.233,
+      "DO_mg_L": 7.221,
+      "Conductivity_mS_cm": 24.333
+    },
+    {
+      "SampleWeek": 5,
+      "Treatment": "Monoculture",
+      "pH": 8.227,
+      "TDS_ppt": 16.993,
+      "Salinity_ppt": 21.343,
+      "Temperature_C": 28.1,
+      "DO_mg_L": 7.683,
+      "Conductivity_mS_cm": 25
+    },
+    {
+      "SampleWeek": 7,
+      "Treatment": "IMTA",
+      "pH": 8.217,
+      "TDS_ppt": 18.18,
+      "Salinity_ppt": 22.997,
+      "Temperature_C": 28.1,
+      "DO_mg_L": 6.387,
+      "Conductivity_mS_cm": 26.733
+    },
+    {
+      "SampleWeek": 7,
+      "Treatment": "Monoculture",
+      "pH": 8.237,
+      "TDS_ppt": 18.927,
+      "Salinity_ppt": 24.023,
+      "Temperature_C": 28.1,
+      "DO_mg_L": 5.705,
+      "Conductivity_mS_cm": 27.8
+    }
+  ],
+  "nutrients": [
+    {
+      "SampleWeek": 3,
+      "Treatment": "IMTA",
+      "NO2_ug_L": 57.333,
+      "NaNO2_ug_L": 86,
+      "NO2_N_ug_L": 17.333,
+      "P2O5_ug_L": 64.333,
+      "P_ug_L": 28,
+      "PO4_ug_L": 86.333
+    },
+    {
+      "SampleWeek": 3,
+      "Treatment": "Monoculture",
+      "NO2_ug_L": 62,
+      "NaNO2_ug_L": 105,
+      "NO2_N_ug_L": 21.5,
+      "P2O5_ug_L": 73.667,
+      "P_ug_L": 32,
+      "PO4_ug_L": 98.333
+    },
+    {
+      "SampleWeek": 7,
+      "Treatment": "IMTA",
+      "NO2_ug_L": 49.667,
+      "NaNO2_ug_L": 74,
+      "NO2_N_ug_L": 15,
+      "P2O5_ug_L": 95.333,
+      "P_ug_L": 42,
+      "PO4_ug_L": 127.333
+    },
+    {
+      "SampleWeek": 7,
+      "Treatment": "Monoculture",
+      "NO2_ug_L": 49,
+      "NaNO2_ug_L": 73.333,
+      "NO2_N_ug_L": 15,
+      "P2O5_ug_L": 53,
+      "P_ug_L": 22.667,
+      "PO4_ug_L": 70.667
+    }
+  ]
+}
