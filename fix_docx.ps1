@@ -25,7 +25,7 @@ New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
 $DocumentXmlPath = Join-Path $TempDir 'word\document.xml'
 $RelationshipsPath = Join-Path $TempDir 'word\_rels\document.xml.rels'
 $ContentTypesPath = Join-Path $TempDir '[Content_Types].xml'
-$StudyMapPath = Join-Path $WorkspaceDir 'assets\study_area_map.jpeg'
+$StudyMapPath = Join-Path $WorkspaceDir 'assets\study_area_map.svg'
 [xml]$Doc = Get-Content -LiteralPath $DocumentXmlPath -Raw
 $Ns = New-Object System.Xml.XmlNamespaceManager($Doc.NameTable)
 $Ns.AddNamespace('w', $WNs)
@@ -130,7 +130,17 @@ foreach ($child in @($Body.ChildNodes)) {
 [xml]$Rels = Get-Content -LiteralPath $RelationshipsPath -Raw
 $RelNs = New-Object System.Xml.XmlNamespaceManager($Rels.NameTable)
 $RelNs.AddNamespace('rel', 'http://schemas.openxmlformats.org/package/2006/relationships')
-$existingStudyRel = $Rels.SelectSingleNode("//rel:Relationship[@Target='media/study_area_map.jpeg']", $RelNs)
+$mediaDir = Join-Path $TempDir 'word\media'
+New-Item -ItemType Directory -Path $mediaDir -Force | Out-Null
+$oldPhotoRel = $Rels.SelectSingleNode("//rel:Relationship[@Target='media/study_area_map.jpeg']", $RelNs)
+if ($oldPhotoRel) {
+  [void]$oldPhotoRel.ParentNode.RemoveChild($oldPhotoRel)
+}
+$oldPhotoMedia = Join-Path $mediaDir 'study_area_map.jpeg'
+if (Test-Path -LiteralPath $oldPhotoMedia) {
+  Remove-Item -LiteralPath $oldPhotoMedia -Force
+}
+$existingStudyRel = $Rels.SelectSingleNode("//rel:Relationship[@Target='media/study_area_map.svg']", $RelNs)
 if ($existingStudyRel) {
   $StudyRelId = $existingStudyRel.Id
 } else {
@@ -142,21 +152,19 @@ if ($existingStudyRel) {
   $newRel = $Rels.CreateElement('Relationship', 'http://schemas.openxmlformats.org/package/2006/relationships')
   [void]$newRel.SetAttribute('Id', $StudyRelId)
   [void]$newRel.SetAttribute('Type', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image')
-  [void]$newRel.SetAttribute('Target', 'media/study_area_map.jpeg')
+  [void]$newRel.SetAttribute('Target', 'media/study_area_map.svg')
   [void]$Rels.DocumentElement.AppendChild($newRel)
 }
-$mediaDir = Join-Path $TempDir 'word\media'
-New-Item -ItemType Directory -Path $mediaDir -Force | Out-Null
-Copy-Item -LiteralPath $StudyMapPath -Destination (Join-Path $mediaDir 'study_area_map.jpeg') -Force
+Copy-Item -LiteralPath $StudyMapPath -Destination (Join-Path $mediaDir 'study_area_map.svg') -Force
 $Rels.Save($RelationshipsPath)
 
 [xml]$ContentTypes = Get-Content -LiteralPath $ContentTypesPath -Raw
 $CtNs = New-Object System.Xml.XmlNamespaceManager($ContentTypes.NameTable)
 $CtNs.AddNamespace('ct', 'http://schemas.openxmlformats.org/package/2006/content-types')
-if (-not $ContentTypes.SelectSingleNode("//ct:Default[@Extension='jpeg']", $CtNs)) {
+if (-not $ContentTypes.SelectSingleNode("//ct:Default[@Extension='svg']", $CtNs)) {
   $default = $ContentTypes.CreateElement('Default', 'http://schemas.openxmlformats.org/package/2006/content-types')
-  [void]$default.SetAttribute('Extension', 'jpeg')
-  [void]$default.SetAttribute('ContentType', 'image/jpeg')
+  [void]$default.SetAttribute('Extension', 'svg')
+  [void]$default.SetAttribute('ContentType', 'image/svg+xml')
   [void]$ContentTypes.DocumentElement.AppendChild($default)
   $ContentTypes.Save($ContentTypesPath)
 }
@@ -181,9 +189,9 @@ foreach ($docPr in $docPrs) {
 $MethodNodes = @(
   (New-TextParagraph '2. Material and Methodology' $true),
   (New-TextParagraph '2.1 Area of Study' $true),
-  (New-TextParagraph 'The sample collection and culture study area was located along the coastal waters of the Jaffna Peninsula, Sri Lanka, associated with the Palk Strait near Velanai/Thurayoor, Jaffna. The map reference provided for the sampling site shows approximately 9°40''01.6"N, 80°01''52.9"E (9.6671°N, 80.0314°E). The broader study area is within the northern coastal region of Sri Lanka, approximately 79.50°E-81.25°E and 9.25°N-10.00°N.' $false),
+  (New-TextParagraph 'The sample collection and culture study area was located along the coastal waters of the Jaffna Peninsula, Sri Lanka, associated with the Palk Strait near Velanai/Thurayoor, Jaffna. The specific sampling position is marked with a square in Figure M1 at approximately 9°40''01.6"N, 80°01''52.9"E (9.6671°N, 80.0314°E). The broader study area is within the northern coastal region of Sri Lanka, approximately 79.50°E-81.25°E and 9.25°N-10.00°N.' $false),
   $StudyImageParagraph,
-  (New-TextParagraph 'Figure M1: Map reference showing the sample collection area near the Palk Strait, Jaffna Peninsula, Sri Lanka.' $true)
+  (New-TextParagraph 'Figure M1: Code-generated study-area map. The square marks the sample collection location near the Palk Strait, Jaffna Peninsula, Sri Lanka.' $true)
 )
 foreach ($node in $MethodNodes) {
   [void]$Body.InsertBefore($node, $ResultsNode)

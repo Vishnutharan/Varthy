@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-label="Study area map with square marker for sampling site near the Palk Strait, Jaffna Peninsula, Sri Lanka">
+  <rect width="1200" height="650" fill="#eaf7fb"/>
+  <rect x="90" y="90" width="1020" height="470" fill="#d8f0f5" stroke="#2f4f5f" stroke-width="3"/>
+
+  <g stroke="#9ab8c2" stroke-width="1.5">
+    <line x1="381.4285714285714" y1="90" x2="381.4285714285714" y2="560"/>
+    <line x1="964.2857142857142" y1="90" x2="964.2857142857142" y2="560"/>
+    <line x1="90" y1="403.3333333333333" x2="1110" y2="403.3333333333333"/>
+    <line x1="90" y1="246.66666666666666" x2="1110" y2="246.66666666666666"/>
+  </g>
+
+  <g font-family="Times New Roman, serif" font-size="24" fill="#243742">
+    <text x="353.4285714285714" y="65">80.0°E</text>
+    <text x="936.2857142857142" y="65">81.0°E</text>
+    <text x="12" y="411.3333333333333">9.5°N</text>
+    <text x="8" y="254.66666666666666">9.75°N</text>
+  </g>
+
+  <polygon points="183.3,415.9 282.3,372.0 369.8,353.2 439.7,372.0 521.3,403.3 626.2,422.1 742.8,440.9 882.7,466.0 1010.9,497.3 1069.2,534.9 917.7,522.4 737.0,497.3 527.1,478.5 358.1,472.3 229.9,453.5" fill="#cfe8c8" stroke="#658b63" stroke-width="3"/>
+
+  <polygon points="159.9,234.1 224.1,165.2 340.6,127.6 515.5,115.1 678.7,133.9 859.4,177.7 1010.9,227.9 1063.4,290.5 987.6,359.5 830.2,397.1 643.7,415.9 486.3,390.8 340.6,365.7 218.2,328.1" fill="#b9ddb2" stroke="#557d55" stroke-width="3"/>
+
+  <polygon points="200.7,315.6 253.2,290.5 329.0,284.3 398.9,296.8 457.2,328.1 393.1,340.7 294.0,346.9" fill="#9ecb99" stroke="#557d55" stroke-width="2"/>
+
+  <rect x="90" y="90" width="1020" height="470" fill="none" stroke="#9a3a3a" stroke-width="4" stroke-dasharray="16 10"/>
+
+  <g>
+    <rect x="381.7" y="280.6" width="36" height="36" fill="#ffffff" stroke="#d71920" stroke-width="6"/>
+    <line x1="399.7" y1="264.6" x2="399.7" y2="233.6" stroke="#d71920" stroke-width="4"/>
+    <rect x="429.7" y="212.6" width="310" height="76" rx="8" fill="#ffffff" stroke="#2f4f5f" stroke-width="2"/>
+    <text x="447.7" y="243.6" font-family="Times New Roman, serif" font-size="24" font-weight="700" fill="#172d38">Sampling site</text>
+    <text x="447.7" y="273.6" font-family="Times New Roman, serif" font-size="22" fill="#172d38">9°40'01.6"N, 80°01'52.9"E</text>
+  </g>
+
+  <g font-family="Times New Roman, serif" fill="#20323b">
+    <text x="585.4285714285681" y="202.79999999999984" font-size="30" font-weight="700">Jaffna Peninsula</text>
+    <text x="189.08571428571526" y="503.6000000000001" font-size="28">Palk Strait</text>
+    <text x="247.37142857142624" y="328.13333333333384" font-size="22">Velanai / Thurayoor</text>
+  </g>
+
+  <g transform="translate(1010, 115)">
+    <path d="M45 0 L75 95 L45 75 L15 95 Z" fill="#ffffff" stroke="#2f4f5f" stroke-width="4"/>
+    <text x="37" y="128" font-family="Times New Roman, serif" font-size="24" fill="#20323b">N</text>
+  </g>
+
+  <g transform="translate(115, 505)" font-family="Times New Roman, serif" fill="#20323b">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#20323b" stroke-width="6"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#20323b" stroke-width="4"/>
+    <line x1="180" y1="-12" x2="180" y2="12" stroke="#20323b" stroke-width="4"/>
+    <text x="0" y="38" font-size="22">0</text>
+    <text x="130" y="38" font-size="22">~50 km</text>
+  </g>
+
+  <g font-family="Times New Roman, serif" font-size="24" fill="#20323b">
+    <rect x="810" y="508" width="28" height="28" fill="#ffffff" stroke="#d71920" stroke-width="5"/>
+    <text x="850" y="531">Square marker: sample location</text>
+  </g>
+</svg>

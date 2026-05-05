@@ -5,8 +5,8 @@ Comprehensive R-based statistical analysis comparing **Integrated Multi-Trophic 
 
 ## Project Structure
 - `README.md`: This file.
-- `assets/study_area_map.jpeg`: Map screenshot showing the sample collection area near the Palk Strait/Jaffna Peninsula.
-- `assets/study_area_reference.jpeg`: Reference photograph of the original study-area methodology note.
+- `scripts/generate_study_area_map.js`: Generates the study-area map from coordinates.
+- `assets/study_area_map.svg`: Code-generated study-area map with a square marker at the sample collection location.
 - `results_analysis_cleaned.xlsx`: Cleaned data with dynamic AGR/SGR.
 - `analysis_part1.R`: Growth analysis (Type III ANOVA for unbalanced n).
 - `analysis_part2.R`: Water quality, nutrients, and narrative corrections.
@@ -14,7 +14,7 @@ Comprehensive R-based statistical analysis comparing **Integrated Multi-Trophic 
 - `result.docx`: Research report (Synchronized with corrected findings).
 
 ## Study Area
-Samples were collected from the coastal waters of the Jaffna Peninsula, Sri Lanka, associated with the Palk Strait near Velanai/Thurayoor, Jaffna. The map reference provided for the sampling site shows approximately `9°40'01.6"N, 80°01'52.9"E` (`9.6671°N, 80.0314°E`). The broader study area is within the northern coastal region of Sri Lanka, approximately `79.50°E-81.25°E` and `9.25°N-10.00°N`.
+Samples were collected from the coastal waters of the Jaffna Peninsula, Sri Lanka, associated with the Palk Strait near Velanai/Thurayoor, Jaffna. The specific sampling position is shown with a square marker at approximately `9°40'01.6"N, 80°01'52.9"E` (`9.6671°N, 80.0314°E`). The broader study area is within the northern coastal region of Sri Lanka, approximately `79.50°E-81.25°E` and `9.25°N-10.00°N`.
 
 ## Key Improvements & Reproducibility
 1. **Unbalanced n**: Handled via Type III ANOVA in `analysis_part1.R` to account for sea cucumber mortality.
